@@ -1,0 +1,206 @@
+#france {
+    display: flex;
+    height: 200px;
+    width: 300px;
+    border: black 1px solid;
+    margin: 1vh;
+}
+#france * {
+    width: 100px;
+    height: 200px;
+}
+#fblue {
+    background-color:#002495;
+}
+#fwhite {
+    background-color: #FFFFFF;
+}
+#fred {
+    background-color: #ED2938;
+}
+
+#germany {
+    display: flex;
+    flex-direction:column;
+    height: 200px;
+    width: 333.3px;
+    border: black 1px solid;
+    margin: 1vh;
+}
+#germany * {
+    height: 66.6px;
+    width: 333px;
+}
+#gblack {
+    background-color: #000000;
+}
+#gred {
+    background-color: #de0002;
+}
+#gyellow {
+    background-color: #ffce00;
+}
+#madagascar {
+    display: grid;
+    height: 200px;
+    width: 300px;
+    border: black 1px solid;
+    margin: 1vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+}
+
+#mwhite {
+    background-color:#ffffff;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+#mred {
+    background-color: #fc3e32;
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+}
+#mgreen {
+    background-color: #007E39;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+}
+/* SWITZERLAND */
+#switzerland {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    background-color: #FF0002;
+    border:1px black solid;
+    margin: 1vh;
+}
+#switzerland * {
+    background-color: white;
+}
+#swhite1 {
+    background-color: white;
+    height: 125px;
+    width: 39px;
+    margin: auto;
+}
+#swhite2 {
+    height: 39px;
+    width: 125px;
+    position: absolute;
+    margin: 0px 37px 0px 37px;
+    align-self: center;
+}
+
+#sweden {
+    display: grid;
+    height: 200px;
+    width: 320px;
+    background-color: #0269A6;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(16, 1fr);
+    border: black 1px solid;
+    margin: 1vh;
+    grid-template-areas:
+        ". . . . . y1 y1 . . . . . . . . ."
+        ". . . . . y1 y1 . . . . . . . . ."
+        ". . . . . y1 y1 . . . . . . . . ."
+        ". . . . . y1 y1 . . . . . . . . ."
+        "y2 y2 y2 y2 y2 y2 y2 y2 y2 y2 y2 y2 y2 y2 y2 y2"
+        "y2 y2 y2 y2 y2 y2 y2 y2 y2 y2 y2 y2 y2 y2 y2 y2"
+        ". . . . . y3 y3 . . . . . . . . ."
+        ". . . . . y3 y3 . . . . . . . . ."
+        ". . . . . y3 y3 . . . . . . . . ."
+        ". . . . . y3 y3 . . . . . . . . .";
+    }
+
+#y1 {
+    grid-area: y1;
+    background-color: #fecc00;
+}
+#y2 {
+    grid-area: y2;
+    background-color: #fecc00;
+}
+#y3 {
+    grid-area: y3;
+    background-color: #fecc00;
+}
+
+#gambia {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 300px;
+    border: black solid 1px;
+    margin: 1vh;
+}
+#gambia * {
+    width: 100%;
+}
+
+#gared {
+    background-color:#CE1127;
+    height: 66.66px;
+    align-self: top;
+    margin-bottom: 11.1px;
+}
+#gablue {
+    background-color:#0D1D8B;
+    height: 44.44px;
+    align-self: middle;
+    margin-bottom: 11.1px;
+}
+#gagreen {
+    background-color: #3B7827;
+    height: 66.66px;
+    align-self: bottom;
+    
+}
+
+#japan {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 300px;
+    border: black solid 1px;
+    margin: 1vh;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#jred {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #BC022C;
+}
+#niger {
+    display: grid;
+    height: 200px;
+    width: 233px;
+    border: black 1px solid;
+    margin: 1vh;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+#norange {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    background-color: #E15307;
+}
+#ngreen {
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+    background-color: #10AF2A;
+}
+#orangec {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    background-color: #E15307;
+    border-radius: 50%;
+    height: 56px;
+    margin: 10px;
+    
+
+}
