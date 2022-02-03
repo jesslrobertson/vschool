@@ -111,15 +111,23 @@ min-height: 100vh;
 .green {
     color: #638F6C;
 }
+.green-accent {
+    height: 1vh;
+    background-color: rgba(99, 143, 108, .5) solid 20px;
+}
 #contact-form {
     display:flex;
     flex-direction: column;
     grid-column: 3 / 6;
-    grid-row: 2 / 3;
+    grid-row: 2 / 4;
     margin: 30px;
     justify-content: center;
     text-align:center;
     width: 100%;
+}
+
+#contact-form * {
+    border: 10px;
 }
 #about-page {
     display:flex;
@@ -127,20 +135,23 @@ min-height: 100vh;
 #mindfulness {
     display: flex;
     grid-row: 2 / 3;
-    grid-column: 2 / 8;
+    grid-column: 1 / 9;
     align-items: center;
     justify-content: center;
+    border-bottom: rgba(99, 143, 108, .5) solid 20px;
+    
 }
 #forest {
-    grid-row: 3 / 6;
-    grid-column: 5 / 8;
+    grid-row: 3 / 7;
+    grid-column: 6 / 9;
     height:100%;
     align-items: center;
+    margin-top: 20px;
 }
 #about-text {
     display: flex;
     grid-row: 3 / 6;
-    grid-column: 2 / 4;
+    grid-column: 2 / 5;
     justify-content: center;
     align-items: center;
 }
