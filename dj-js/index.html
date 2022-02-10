@@ -3,11 +3,20 @@
     <head>
         <title>DJ-JS</title>
         <link href="styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Supermercado+One&display=swap" rel="stylesheet">
 
     </head>
     <body>
-        <h1>DJ-JS</h1>
-        <button id="button"></button>
+        <div id="whole-page" onwheel="turnOrange">
+            <h1 id="header">DJ-JS</h1>
+            <div id="container">
+                    <div id="button-div">
+                        <button id="button" onmouseover="turnBlue" onmouseleave="revert" onmousedown="turnRed" onmouseup="turnYellow" ondblclick="turnGreen"  ></button>
+                    </div>    
+            </div>
+        </div>      
         <script src="main.js"></script>
     </body>
 </html>
