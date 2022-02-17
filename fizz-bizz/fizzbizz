@@ -1,0 +1,13 @@
+const fizzBizz = () => {
+    for (let i = 0 ; i < 50 ; i++) {
+    if (i % 3 === true) {
+        console.log("fizz");
+    }
+    if (i % 5 === true) {
+        console.log("bizz");
+    }
+    else console.log(i);
+    }
+};
+
+fizzBizz();
