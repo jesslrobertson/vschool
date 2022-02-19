@@ -97,6 +97,5 @@ for (let i = 0; i < arrayOfArrays.length; i++){
     for (let j = 0; j < 3; j++){
         arrayOfArrays[i][j] = "x"
     }
-
 }
 console.log(arrayOfArrays)
