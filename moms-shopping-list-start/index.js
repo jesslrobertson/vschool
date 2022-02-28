@@ -51,7 +51,7 @@ function saveEditedItem(event, newItem, editInputBox, saveButton, editButton) {
 function editListItem(event, newItem, editInputBox, editButton, saveButton) {
     editButton.style.display = "none";
     editInputBox.style.display = "block";
-    saveButton.style.display = "initial";
+    saveButton.style.display = "inline";
     newItem.style.display = "none";
     editInputBox.value = newItem.textContent;
 }
