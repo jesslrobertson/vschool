@@ -33,21 +33,21 @@ backpack.addItem(cloak);
 //script
 const userName = readline.question("Please enter your name: ")
 const self = new Character(userName, 20, "", 4);
-console.log("About you: You just woke up in what looks like a forest. \nYou don't know where you are, but otherwise, you seem to be ok.");
+console.log("\nAbout you: You just woke up in what looks like a forest. \nYou don't know where you are, but otherwise, you seem to be ok.");
 readline.keyInPause();
 console.log(`\nIn fact, you have ${self.hp} hit points! \nYour current max attack power is ${self.attack} hp. \nYou notice a hermit standing over you...`);
 readline.keyInPause();
-console.log(`Greetings, ${self.name}! I am so glad you are here!`);
+console.log(`\nGreetings, ${self.name}! I am so glad you are here!`);
 readline.keyInPause() 
 console.log(`\n...Oh, you don't know where here is? Well, you're in the Fire Swamp. \nIt's a lovely place - at least, it's lovely every day you're still breathing!"`);
 readline.keyInPause()
-console.log("Ah, well, I'm sorry to hear about your fight with the Prince. \nI can show you the trail out....maybe you can take out some of the pests that have been harrassing me on the way. \nAt least you didn't come empty handed! What have you got in that bag, there?");
+console.log("\nAh, well, I'm sorry to hear about your fight with the Prince. \nI can show you the trail out....maybe you can take out some of the pests that have been harrassing me on the way.\n\nAt least you didn't come empty handed! What have you got in that bag, there?");
 console.log(backpack.checkBag());
 readline.keyInPause()
-console.log("You can check your inventory at any time by typing 'p' or 'print'. \nI can see that you're ready to be on your way. \nIt's dangerous to go alone. Take this!");
+console.log("\nYou can check your inventory at any time by typing 'p' or 'print'. \nI can see that you're ready to be on your way. \n\nIt's dangerous to go alone. Take this!");
 backpack.addItem(sword);
 readline.keyInPause()
-console.log(`The hermit hands you a bundle...you unwrap it, and find a sword! \n...It's ${sword.condition}, but doesn't seem like anything special.`);
+console.log(`\nThe hermit hands you a bundle...you unwrap it, and find a sword! \n...It's ${sword.condition}, but doesn't seem like anything special.`);
 
 while (self.hp > 0){
     receiveAction();
@@ -77,7 +77,7 @@ function runOrFight(){
 }
 
 function receiveAction(){
-    const action = readline.keyIn('press w to walk, p to check inventory,\n', {limit: 'wp'});
+    const action = readline.keyIn('\nPress w to walk, p to check inventory.\n', {limit: 'wp'});
     if (action === "w"){
         console.log("walking");
         walk();
@@ -88,21 +88,21 @@ function receiveAction(){
 
 function walk(){
     if (Math.random() * 100 < 75){
-        console.log("All quiet...")
+        console.log("\nAll quiet...")
         
     }
     else {
-        console.log("Something is coming...")
+        console.log("\nSomething is coming...")
         runOrFight();
     }
 }
 
 function flee(enemyIndex){
     if (Math.random() * 100 < 50){
-        console.log("Run awaaaayyyyyyy");
+        console.log("\nRun awaaaayyyyyyy");
         receiveAction();
     } else {
-        console.log("Not fast enough. Get ready for a fight!")
+        console.log("\nNot fast enough. Get ready for a fight!")
         fight(enemyIndex);
     }
 }
@@ -112,28 +112,28 @@ function fight(enemyIndex){
     while (self.hp > 0 && enemy.hp > 0){
         let attack = Math.floor(Math.random() * self.attack);
         if (attack === 0){
-            console.log(self.name + " missed!");
+            console.log(`\n${self.name} missed!`);
         } else {
-            console.log(self.name + " dealt " + attack + " hp damage!");
+            console.log(`\n${self.name}  dealt ${attack}hp damage!`);
         }
         enemy.hp = enemy.hp - attack;
         let counterAttack = Math.floor(Math.random() * enemy.attack);
         if (counterAttack === 0){
-            console.log(enemy.name + " missed!");
+            console.log(`\n${enemy.name} missed!`);
         } else {
-            console.log(enemy.name + " dealt " + counterAttack + " hp damage!");
             if (enemy.name === "The Booer"){
                 heckle();
             }
+            console.log(`\n${enemy.name} dealt ${counterAttack}hp damage!`);
         }
         self.hp = self.hp - counterAttack;
         readline.keyInPause();
     }
     if (self.hp <= 0){
-        console.log("(×-×) You died!")
+        console.log("\n(×-×) You died!")
     }
     if (enemy.hp <= 0){
-        console.log("You defeated " + enemy.name + "!!!");
+        console.log(`\nYou defeated ${enemy.name}!!!`);
         if (enemy.unique === true){
             enemies.splice(enemyIndex, 1);
         } else {
@@ -147,19 +147,19 @@ function fight(enemyIndex){
 function heckle(){
     const insults = ["Boooo...BOOOOOO!!!!!", "Rubbish!", "Filth!", "Slime!", "Muck!", "Putrescence", "You'll die in the Fire Swamp!!"];
     let insult = insults[Math.floor(Math.random() * insults.length)];
-    console.log(insult);
+    console.log(`\n${insult}`);
 }
 
 function loot(enemy){
-    console.log(`You got ${enemy.loot.name}!!`)
+    console.log(`\nYou got ${enemy.loot.name}!!`)
     backpack.addItem(enemy.loot);
     if (enemy.loot === potion){
         self.hp = self.hp + 10;
-        console.log(`You drink the potion....and gain 10hp! You now have ${self.hp}hp!`);
+        console.log(`\nYou drink the potion....and gain 10hp! You now have ${self.hp}hp!`);
     }
     if (enemy.loot === specialSword){
         self.attack = self.attack + 2;
-        console.log(`You inspect the sword...It's ${specialSword.condition}, and easily worth ${specialSword.value}. \nYou have never seen its equal. \nYour max attack increases by 2! Your new max attack is ${self.attack}!`)
+        console.log(`\nYou inspect the sword...It's ${specialSword.condition}, and easily worth ${specialSword.value}. \nYou have never seen its equal. \nYour max attack increases by 2! \nYour new max attack is ${self.attack}!`)
     }
 }
 
