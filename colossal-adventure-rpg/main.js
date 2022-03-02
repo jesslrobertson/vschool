@@ -103,6 +103,7 @@ function flee(enemyIndex){
         receiveAction();
     } else {
         console.log("\nNot fast enough. Get ready for a fight!")
+        readline.keyInPause;
         fight(enemyIndex);
     }
 }
@@ -147,7 +148,7 @@ function fight(enemyIndex){
 function heckle(){
     const insults = ["Boooo...BOOOOOO!!!!!", "Rubbish!", "Filth!", "Slime!", "Muck!", "Putrescence", "You'll die in the Fire Swamp!!"];
     let insult = insults[Math.floor(Math.random() * insults.length)];
-    console.log(`\n${insult}`);
+    console.log(`\nThe Booer uses her Heckle ability and screams, \n"${insult}"`);
 }
 
 function loot(enemy){
