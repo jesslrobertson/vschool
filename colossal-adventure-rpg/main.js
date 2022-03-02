@@ -1,4 +1,5 @@
 const readline = require("readline-sync");
+
 const backpack = {
     items: [],
     addItem: function(item){
@@ -26,13 +27,13 @@ const theBooer = new Character("The Booer", 10, "Expert Heckler", 3, true, potio
 const countRugen = new Character("Count Rugen", 15, "Has six fingers on his right hand", 4, true, specialSword);
 
 const enemies = [rodentOfUnusualSize, princeHumperdink, theBruteSquad, theBooer, countRugen];
- 
+
 backpack.addItem(bread);
 backpack.addItem(cloak);
 //script
 const userName = readline.question("Please enter your name: ")
 const self = new Character(userName, 20, "", 4);
-console.log("About you: You just woke up in what looks like a forest. \nYou don't know where you are, but otherwise, you seem to be ok.")
+console.log("About you: You just woke up in what looks like a forest. \nYou don't know where you are, but otherwise, you seem to be ok.");
 readline.keyInPause();
 console.log(`\nIn fact, you have ${self.hp} hit points! \nYour current max attack power is ${self.attack} hp. \nYou notice a hermit standing over you...`);
 readline.keyInPause();
@@ -126,6 +127,7 @@ function fight(enemyIndex){
             }
         }
         self.hp = self.hp - counterAttack;
+        readline.keyInPause();
     }
     if (self.hp <= 0){
         console.log("(×-×) You died!")
