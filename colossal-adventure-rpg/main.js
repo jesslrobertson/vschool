@@ -87,6 +87,7 @@ function loot(enemy){
 function recoverHealth(){
     let health = Math.floor(Math.random() * 10);
     self.hp = health + self.hp;
+    console.log(`\nYou added ${health} hp!`);
 }
 //TODO write flee function
 function flee(){
