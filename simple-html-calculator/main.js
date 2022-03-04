@@ -18,46 +18,48 @@ addition.addEventListener("submit", (e) => {
     e.preventDefault();
     const firstAdd = addition.firstAdd.value;
     const secondAdd = addition.secondAdd.value;
-    addNums(firstAdd, secondAdd);
+    let sum = addNums(firstAdd, secondAdd);
+    let newH3 = document.createElement('h3');
+    newH3.textContent = sum;
+    console.log(sum);
+    addDiv.append(newH3);
     addition.reset();
 })
 subtraction.addEventListener("submit", (e) => {
     e.preventDefault();
     const firstSub = subtraction.firstSub.value;
     const secondSub = subtraction.secondSub.value;
-    subtract(firstSub, secondSub);
+    let result = subtract(firstSub, secondSub);
+    let newH3 = document.createElement('h3');
+    newH3.textContent = result;
+    subDiv.append(newH3);
     subtraction.reset();
 })
 multiplication.addEventListener("submit", (e) => {
     e.preventDefault();
     const firstMulti = multiplication.firstMulti.value;
     const secondMulti = multiplication.secondMulti.value;
-    multiply(firstMulti, secondMulti);
+    let result =  multiply(firstMulti, secondMulti);
+    let newH3 = document.createElement('h3');
+    newH3.textContent = result;
+    multiDiv.append(newH3);
     multiplication.reset();
 })
 //FUNCTIONS
 function addNums(x,y){
     let sum = Number(x) + Number(y);
-    let newH3 = document.createElement('h3');
-    newH3.textContent = sum;
-    console.log(sum);
-    addDiv.append(newH3);
+    return sum;
 }
 
 function subtract(x,y){
     let result = Number(x) - Number(y);
-    let newH3 = document.createElement('h3');
-    newH3.textContent = result;
-    console.log(result);
-    subDiv.append(newH3);
+    return result;
 }
 
 function multiply(x,y){
     let result = Number(x) * Number(y);
-    let newH3 = document.createElement('h3');
-    newH3.textContent = result;
-    console.log(result);
-    multiDiv.append(newH3);
+    return result;
+
 }
 
 styleMultiple(inputs, 'inputs');
