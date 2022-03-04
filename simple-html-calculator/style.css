@@ -1,0 +1,66 @@
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#container > * {
+    padding: 30px;
+    border: white solid 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.titles {
+    text-align: center;
+}
+.inputs {
+    display: block;
+    margin: 5px;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+#h1 {
+    border: slategray solid 2px;
+    padding: 10px;
+}
+#add {
+    background-color: paleturquoise;
+    align-items: center;
+    display: flex;
+}
+#subtract {
+    background-color: palegreen;
+}
+#multiply {
+    background-color: lavender;
+}
+
+@media only screen and (min-width: 650px){
+    #container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 20vh, 40vh, 40vh;
+    }
+    #h1 {
+        grid-column: 1 / 4;
+    }
+    #add {
+        display: grid;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    #subtract {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    #multiply {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+}

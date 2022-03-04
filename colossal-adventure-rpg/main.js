@@ -115,7 +115,7 @@ function fight(enemyIndex){
         if (attack === 0){
             console.log(`\n${self.name} missed!`);
         } else {
-            console.log(`\n${self.name}  dealt ${attack}hp damage!`);
+            console.log(`\n${self.name} dealt ${attack}hp damage!`);
         }
         enemy.hp = enemy.hp - attack;
         let counterAttack = Math.floor(Math.random() * enemy.attack);
@@ -173,7 +173,7 @@ function recoverHealth(){
 function Item(name, purpose, value, condition, specialPower, unique, attackAdvantage){
     this.name = name;
     this.purpose = purpose;
-    this.condition = condition;1
+    this.condition = condition;
     this.value = value;
     this.specialPower = specialPower;
     this.unique = unique;
