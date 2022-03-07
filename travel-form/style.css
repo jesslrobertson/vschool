@@ -1,0 +1,52 @@
+#travelForm {
+    font-family: 'Roboto', sans-serif;
+    width: 80vw;
+    
+}
+#container {
+    padding: 10px;
+    margin: 10px;
+    border: 2px black solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2 {
+    text-align: center;
+}
+h4 {
+    background-color: slategray;
+    color: white;
+    text-align: center;
+}
+.inputBox {
+    display: inline;
+    margin: 10px;
+}
+#container * {
+    padding: 3px;
+}
+#dietContainer {
+    display: flex;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+}
+.dietColumn1 {
+    display: inline-block;
+    width: 15vw;
+    margin: auto;
+}
+.dietColumn2 {
+    display: inline-block;
+    width: 15vw;
+}
+.dietColumn3 {
+    display: inline-block;
+    width: 15vw;
+}
+#gender {
+    margin: 10px;
+}
+#button {
+    margin-left: 20px;
+}

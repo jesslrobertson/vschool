@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <form id="travelForm" name="travelForm">
+                <h2>Travel Form</h2>
+                <h4>Basics</h4>
+                <input type="text" name="firstName" placeholder="First Name" class="inputBox">
+                <input type="text" name="lastName" placeholder="Last Name" class="inputBox">
+                <br>
+                <input type="number" name="age" placeholder="Age" class="inputBox">
+                <br>
+                <div id="gender">
+                    Female<input type="radio" name="gender" value="female">
+                    Male<input type="radio" name="gender" value="male">
+                    Non-Binary<input type="radio" name="gender" value="nonBinary">
+                    Other/Prefer not to say<input type="radio" name="gender" value="optOut">
+                </div>
+                <h4>Destination</h4>
+                <select name="destination">
+                    <option value="seattle">Seattle</option>
+                    <option value="vancouver">Vancouver</option>
+                    <option value="santaCruz">Santa Cruz</option>
+                </select>
+                <h4>Dietary Restrictions</h4>
+                <p>Check all that apply</p>
+                <div id="dietContainer"></div>
+                    <div class= "dietColumn1">
+                        Vegan<input class="checks" type="checkbox" name="diet" value="vegan">
+                        <br>
+                        Vegetarian<input class="checks" type="checkbox" name="diet" value="vegetarian">
+                        <br>
+                    </div>
+                    <div class="dietColumn2">
+                        Gluten Free<input class="checks" type="checkbox" name="diet" value="glutenFree">
+                        Lactose Free<input type="checkbox" class="checks" name="diet" value="lactoseFree">
+                        <br>
+                    </div>
+                    <div class="dietColumn3">
+                        Nut Allergy<input class="checks" type="checkbox" name="diet" value="nutAllergy">
+                        <br>
+                        Paleo<input class="checks" type="checkbox" name="diet" value="paleo">
+                        <br>
+                    </div>
+                </div>
+                <button id="button">Submit</button>
+            </form>
+        </div>
+        <script src="main.js"></script> 
+    </body>
+</html>
