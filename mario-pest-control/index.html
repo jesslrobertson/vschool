@@ -6,6 +6,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;700&display=swap" rel="stylesheet">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
     </head>
     <body>
         <div id="headerWrapper">
@@ -21,7 +22,7 @@
                         <h2 class="name" id="goomba">Goomba</h2>
                         <h2 class="price" id="goombaPrice">5 coins</h2>
                         <div id="goombaInputDiv" class="baddieInputDiv">
-                            <input id="goombaInput" type="num" class="baddieInput">
+                            <input id="goombaInput" type="number" class="baddieInput">
                         </div>
                     </div>
                     <div id="bobOmbDiv" class="baddieDiv">
@@ -29,15 +30,15 @@
                         <h2 class="name" id="bobOmb">Bob-omb</h2>
                         <h2 class="price" id="bobOmbPrice">7 coins</h2>
                         <div class="baddieInputDiv">
-                            <input id="bobOmbInput" type="num" class="baddieInput">
+                            <input id="bobOmbInput" type="number" class="baddieInput">
                         </div>
                     </div>
                     <div id="cheepDiv" class="baddieDiv">
                         <img id="cheepPic" class="baddiePic" src="resources/Cheep_Cheep.png">
                         <h2 class="name" id="cheep">Cheep-Cheep</h2>
-                        <h2 class="price" id="cheepPrice">7 coins</h2>
+                        <h2 class="price" id="cheepPrice">11 coins</h2>
                         <div class="baddieInputDiv">
-                            <input type="num" id= "cheepInput" class="baddieInput">
+                            <input type="number" id= "cheepInput" class="baddieInput">
                         </div>
                     </div>
                 </div>
@@ -46,8 +47,10 @@
                 </div>
             </form>
             <div id="total">
+                <h1>Grand Total:</h1>
             </div>
         </div>
+        <script src="main.js"></script>
     </body>
     <footer>
 
