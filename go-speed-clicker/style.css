@@ -1,0 +1,51 @@
+#pageContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    background-color: black;
+    height: 100%;
+    font-family: 'Space Mono', monospace;
+}
+#headerDiv {
+    color: white;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 0 0 3px rgb(76, 255, 76), 0 0 10px rgb(76, 255, 76);
+    height: 200px;
+    width: 100%;
+}
+#countdownDiv {
+    display: block;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 0 0 3px rgb(76, 255, 76), 0 0 10px rgb(76, 255, 76);
+    height: 200px;
+    width: 200px;
+    margin: 50px;
+}
+#clickCounterDiv {
+    display: block;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 0 0 3px rgb(76, 255, 76), 0 0 10px rgb(76, 255, 76);
+    height: 200px;
+    width: 200px;
+    margin: 50px;
+}
+#previousScoreDiv {
+    display: block;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 0 0 3px rgb(76, 255, 76), 0 0 10px rgb(76, 255, 76);
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+}
