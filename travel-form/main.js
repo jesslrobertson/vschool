@@ -14,6 +14,6 @@ form.addEventListener("submit", (e) => {
         dietaryRestrictions.push(form.diet[i].value);
         }
     }
-    alert(`First Name: ${firstName} \n Last Name: ${lastName}\nAge: ${age}\nGender: ${gender}\nDestination: ${destination}\nDiet: ${dietaryRestrictions}`);
+    alert(`First Name: ${firstName} \nLast Name: ${lastName}\nAge: ${age}\nGender: ${gender}\nDestination: ${destination}\nDiet: ${dietaryRestrictions}`);
     form.reset();
 })

@@ -1,4 +1,4 @@
-numArray = [4, 8, 19, 21];
+// numArray = [4, 8, 19, 21];
 
 // const doubleNumbers = numArray.map(num => num * 2);
 
