@@ -1,0 +1,153 @@
+
+#container {
+    display: grid;
+}
+body {
+    margin: 0px;
+}
+#header1 {
+    background-image: url(contours.png), url(gridlines.png), url(noise.png), url(huntington-header.jpeg);
+    background-color: #2d6360;
+    background-repeat: no-repeat, repeat, no-repeat, no-repeat;
+    background-size: cover, cover, auto, cover;
+    margin: 0px;
+    position: absolute, absolute, absolute, center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: rgba(19, 67, 71, 0.9) solid 25px;
+    font-size: 70%;
+    
+}
+#wholeTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#title {
+    font-family: 'Julius Sans One', sans-serif;
+    color: white;
+    align-self: center;
+    font-size: 3.2vh;
+}
+#subTitle {
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    color: white;
+    opacity: 65%;
+    display: flex;
+}
+#header2 {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    opacity: 90%;
+}
+#subheader {
+    font-family: 'Julius Sans One', sans-serif;
+}
+.arrow {
+    font-family: 'verdemoderna';
+    font-size: 3vh;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
+    #container {
+        grid-template-rows: 29vh, auto, auto, auto, auto, 110px, auto, auto;
+    }
+    #header1 {
+        grid-template-rows: 1 / 2;
+        height: 28.5vh;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        contain: content;
+
+    }
+    #wholeTitle {
+        height: 19vh;
+        contain: content;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 115px;
+    }
+    #title {
+        font-size: 3.3vh;
+        text-shadow: .6px -.3px .5px black;
+        position: center;
+        margin: 10px;
+    }
+    #subTitle {
+        font-size: 2.07vh;
+        position: flex-end;
+        margin-top: 0px;
+        margin-bottom: 70px;
+    }
+    #header2 {
+        background-color: rgba(255, 255, 255, .25);
+        color: white;
+        height: 6.5vh;
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    #subheader {
+        align-self: center;
+        opacity: 90%;
+        font-size: 1.9vh;
+        font-family: 'julius sans one', sans-serif;
+    }
+    .arrow {
+        opacity: 70%;
+        align-self: center;
+        font-size: 5vh;
+        font-family: 'verdemoderna', sans-serif;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    #enso {
+        height: 6vh;
+        position: flex-start;
+        opacity: 70%;
+        margin-bottom: 15px;
+    }
+}
+    
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    /* Styles */
+    #container {
+        grid-template-rows: 230px, auto, auto, auto, auto, 122px, auto, auto;
+    }
+}
+    /* Desktops and laptops ----------- */
+    @media only screen  and (min-width : 1132px) {
+    /* Styles */
+    #container {
+        grid-template-columns: 66%, 34%;
+        grid-template-rows: 310px, auto, auto, auto, 320px, 152px;
+    }
+}
+    
+    /* Large screens ----------- */
+    @media only screen  and (min-width : 1824px) {
+    /* Styles */
+}
+/*icon font*/
+@font-face {
+	font-family: 'verdemoderna';
+	src:url('verdemoderna.eot');
+	src:url('verdemoderna.eot?#iefix') format('embedded-opentype'),
+		url('verdemoderna.woff') format('woff'),
+		url('verdemoderna.ttf') format('truetype'),
+		url('verdemoderna.svg#verdemoderna') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}  
