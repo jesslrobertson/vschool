@@ -51,6 +51,16 @@ body {
     font-family: 'verdemoderna';
     font-size: 3vh;
 }
+.libre {
+    font-family: 'Libre Baskerville', serif;
+}
+.julius {
+    font-family: 'Julius Sans One', sans-serif;
+}
+#intro1 {
+    color: #325050;
+    
+}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* Styles */
@@ -117,6 +127,14 @@ body {
         position: flex-start;
         opacity: 70%;
         margin-bottom: 15px;
+    }
+    .intro1 {
+        font-size: .8em;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-left: 8em;
+        margin-right: 8em;
+        line-height: 5em;
     }
 }
     
