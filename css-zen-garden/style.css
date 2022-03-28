@@ -93,6 +93,58 @@ p {
     margin-block-start: 1em;
     margin-block-end: 1.1em;
 }
+#participation1 {
+    background-image: url(contours-opaque.png), url(gridlines-opaque.png), url(bamboo.png);
+    background-attachment: scroll, scroll, fixed;
+    background-color: rgba(138,188,159,0.5);
+    background-repeat: repeat, repeat, no-repeat;
+    background-size: auto, auto, cover;
+}
+#credits {
+    background-image: url(contours.png), url(gridlines.png), url(noise.png), url(koi.jpeg);
+    background-position: 0 0, -5px, -25px, 0 0, 0 50%;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-size: auto, auto, auto, cover;
+    text-align: center;
+    margin: auto;
+}
+#creditText {
+    width: 80%;
+    font-size: 2em;
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    color:rgba(255, 255, 255, .25);
+    margin: auto;
+    margin-top: 3.1em;
+    margin-bottom: 3.1em;
+    line-height: 2;
+}
+.noItalic {
+    font-style: normal;
+    color: rgb(255, 255, 255, .6)
+}
+#footer {
+    background-color: #134347;
+    color: rgba(255, 255, 255, .5);
+    text-align: center;
+    font-family: 'verdemoderna', sans-serif;
+    font-size: 50px;
+    -webkit-font-smoothing: antialiased;
+}
+#footerIcons {
+    font-weight: normal;
+    
+}
+h4 {
+    font-family: 'Julius Sans One', sans-serif;
+}
+.designs {
+    font-family: 'libre baskerville', serif;
+}
+#intro2 {
+    background-color: #e6ede9;
+
+}
 
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -186,6 +238,12 @@ p {
     }
     .julius {
         font-weight: normal;
+    }
+    #credits {
+        grid-row: 6 / 7;
+    }
+    #intro2{
+        grid-row: 8 / 9;
     }
 }
     
