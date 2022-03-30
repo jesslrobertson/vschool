@@ -2,7 +2,7 @@ body {
     color: #325050;
     background: white;
     font-family: 'libre baskerville', sans-serif;
-    font-size: 70%;
+    font-size: 100%;
     display: block;
 }
 #container {
@@ -22,7 +22,7 @@ body {
     justify-content: center;
     align-items: center;
     border-top: rgba(19, 67, 71, 0.9) solid 25px;
-    font-size: 70%;
+    font-size: 100%;
     
 }
 #wholeTitle {
@@ -76,24 +76,24 @@ h3 {
     font-family: 'Julius Sans One', sans-serif;
     width: 80%;
     line-height: 1.45em;
-    font-size: 2.7em;
+    font-size: 1.7em;
     margin: auto;
 }
 .pTitle {
-    font-size: 2.7em;
-    line-height: 1.45em;
+    font-size: 2.2em;
+    line-height: 1;
     margin-bottom: .7em;
     margin-top: 3.1em;
 }
 p {
-    font-size: 1.1em;
+    font-size: 50%;
     line-height: 2.03;
     margin: auto;
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1.1em;
 }
-#participation1 {
+.participation {
     background-image: url(contours-opaque.png), url(gridlines-opaque.png), url(bamboo.png);
     background-attachment: scroll, scroll, fixed;
     background-color: rgba(138,188,159,0.5);
@@ -107,21 +107,22 @@ p {
     background-size: auto, auto, auto, cover;
     text-align: center;
     margin: auto;
+    border: none;
 }
 #creditText {
     width: 80%;
-    font-size: 2em;
+    font-size: 4em;
     font-family: 'Libre Baskerville', serif;
     font-style: italic;
-    color:rgba(255, 255, 255, .25);
+    color:rgba(255, 255, 255, .39);
     margin: auto;
-    margin-top: 3.1em;
-    margin-bottom: 3.1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
     line-height: 2;
 }
 .noItalic {
     font-style: normal;
-    color: rgb(255, 255, 255, .6)
+    color: rgb(255, 255, 255, .7)
 }
 #footer {
     background-color: #134347;
@@ -133,17 +134,140 @@ p {
 }
 #footerIcons {
     font-weight: normal;
-    
-}
-h4 {
-    font-family: 'Julius Sans One', sans-serif;
-}
-.designs {
-    font-family: 'libre baskerville', serif;
 }
 #intro2 {
     background-color: #e6ede9;
-
+    font-size: 1em;
+}
+#designList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 20px;
+    list-style: none;
+    overflow: hidden;
+    float: left;
+}
+li {
+    font-family: 'julius sans one', sans-serif;
+    font-size: 1.5em;
+    padding: 5px;
+    color: #607476;
+    border-bottom:  solid 1px #5c6d65;
+    padding: 1.3em 5%;
+    float: left;
+    width: 40%;
+    clear: left;
+}
+#participation2 {
+    font-size: 1em;
+}
+#resources {
+    font-size: 2.5em;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-inline-start: 20px;
+    margin-block-start: 0;
+}
+#resources li:last-child {
+    float: none;
+    width: auto;
+    border-bottom: solid 1px #5c6d65;
+    width: 100%;
+}
+.designName, .resourceList {
+    font-size: 1.1em;
+}
+.designer {
+    font-family: 'libre baskerville', serif;
+    padding: 3px;
+    color: #616857;
+    text-align: left;
+    margin-inline-start: 0;
+    font-size: .5em;
+}
+#title {
+    font-size: 3.3vh;
+    text-shadow: .6px -.3px .5px black;
+    position: center;
+    margin: 10px;
+}
+.italics {
+    font-style: italic;
+    color: #c0cac3;
+}
+#header1 {
+    height: 28.5vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    contain: content;
+}
+#wholeTitle {
+    height: 19vh;
+    contain: content;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 115px;
+}
+#subTitle {
+    font-size: 2.07vh;
+    position: flex-end;
+    margin-top: 0px;
+    margin-bottom: 70px;
+}
+#header2 {
+    background-color: rgba(255, 255, 255, .25);
+    color: white;
+    height: 6.5vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+#subheader {
+    align-self: center;
+    opacity: 90%;
+    font-size: 1.9vh;
+    font-family: 'julius sans one', sans-serif;
+}
+.arrow {
+    opacity: 70%;
+    align-self: center;
+    font-size: 5vh;
+    font-family: 'verdemoderna', sans-serif;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#enso {
+    height: 6vh;
+    position: flex-start;
+    opacity: 70%;
+    margin-bottom: 15px;
+}
+p {
+    font-size: .85em;
+    line-height: 2.05;
+    margin: auto;
+    display: block;
+    margin-block-start: 1.1em;
+    margin-block-end: 1.1em;
+    width: 80%;
+}
+#intro1 {
+    margin-top: 5em;
+    margin: auto;
 }
 
 
@@ -155,83 +279,19 @@ h4 {
     }
     #header1 {
         grid-template-rows: 1 / 2;
-        height: 28.5vh;
-        margin: 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        contain: content;
-
     }
-    #wholeTitle {
-        height: 19vh;
-        contain: content;
-        text-align: center;
-        align-items: center;
-        margin-bottom: 115px;
-    }
-    #title {
-        font-size: 3.3vh;
-        text-shadow: .6px -.3px .5px black;
-        position: center;
-        margin: 10px;
-    }
-    #subTitle {
-        font-size: 2.07vh;
-        position: flex-end;
-        margin-top: 0px;
-        margin-bottom: 70px;
-    }
-    #header2 {
-        background-color: rgba(255, 255, 255, .25);
-        color: white;
-        height: 6.5vh;
-        width: 100vw;
-        position: absolute;
-        bottom: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 20px;
-    }
-    #subheader {
-        align-self: center;
-        opacity: 90%;
-        font-size: 1.9vh;
-        font-family: 'julius sans one', sans-serif;
-    }
-    .arrow {
-        opacity: 70%;
-        align-self: center;
-        font-size: 5vh;
-        font-family: 'verdemoderna', sans-serif;
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-    #enso {
-        height: 6vh;
-        position: flex-start;
-        opacity: 70%;
-        margin-bottom: 15px;
-    }
-    p {
-        font-size: 1.1em;
-        line-height: 2.05;
-        margin: auto;
-        display: block;
-        margin-block-start: 1.1em;
-        margin-block-end: 1.1em;
-        width: 80%;
-    }
+    
     #intro1 {
-        margin-top: 5em;
-        margin: auto;
+        grid-row: 2 / 3;
+    }
+    #participation1 {
+        grid-row: 3 / 4;
     }
     #p2 {
         display: none;
     }
     h3 {
-        font-size: 2em;
+        font-size: 1.7em;
         line-height: 2em;
         width: 80%;
         color: #2e484c;
@@ -239,12 +299,26 @@ h4 {
     .julius {
         font-weight: normal;
     }
+    #requirements1 {
+        grid-row: 4 / 5;
+    }
     #credits {
+        grid-row: 5 / 6;
+
+    }
+    #footer {
         grid-row: 6 / 7;
+        font-size: 3.7em;
+        letter-spacing: .3em;
+        height: 100%;
+        border: none;
     }
-    #intro2{
+    #intro2 {
+        grid-row: 7 / 8;
+        display: grid;
+    }
+    #participation2 {
         grid-row: 8 / 9;
-    }
 }
     
     /* iPads (portrait and landscape) ----------- */
@@ -252,6 +326,13 @@ h4 {
     /* Styles */
     #container {
         grid-template-rows: 230px, auto, auto, auto, auto, 122px, auto, auto;
+    }
+    #wholeTitle {
+        height: 19vh;
+        contain: content;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 115px;
     }
 }
     /* Desktops and laptops ----------- */
