@@ -23,6 +23,7 @@ body {
     align-items: center;
     border-top: rgba(19, 67, 71, 0.9) solid 25px;
     font-size: 100%;
+    height: 100%;
     
 }
 #wholeTitle {
@@ -36,6 +37,11 @@ body {
     color: white;
     align-self: center;
     font-size: 3.2vh;
+    text-shadow: 0px 0px .5px black;
+    position: center;
+    margin: 10px;
+    -webkit-font-smoothing: antialiased;
+    
 }
 #subTitle {
     font-family: 'Libre Baskerville', serif;
@@ -55,6 +61,11 @@ body {
     color: white;
     text-align: center;
     justify-self: center;
+    align-self: center;
+    opacity: 90%;
+    font-size: 1.9vh;
+    -webkit-font-smoothing: antialiased;
+    }
 }
 .arrow {
     font-family: 'verdemoderna';
@@ -80,19 +91,19 @@ h3 {
     margin: auto;
 }
 .pTitle {
-    font-size: 2.2em;
+    font-size: 1.1em;
     line-height: 1;
     margin-bottom: .7em;
     margin-top: 3.1em;
 }
-p {
-    font-size: 50%;
+/* p {
+    font-size: .5em;
     line-height: 2.03;
     margin: auto;
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1.1em;
-}
+} */
 .participation {
     background-image: url(contours-opaque.png), url(gridlines-opaque.png), url(bamboo.png);
     background-attachment: scroll, scroll, fixed;
@@ -193,17 +204,17 @@ li {
     margin-inline-start: 0;
     font-size: .5em;
 }
-#title {
+/* #title {
     font-size: 3.3vh;
-    text-shadow: .6px -.3px .5px black;
+    text-shadow: 0px 0px 1px black;
     position: center;
     margin: 10px;
-}
+} */
 .italics {
     font-style: italic;
     color: #c0cac3;
 }
-#header1 {
+/* #header1 {
     height: 28.5vh;
     margin: 0px;
     display: flex;
@@ -217,13 +228,9 @@ li {
     text-align: center;
     align-items: center;
     margin-bottom: 115px;
-}
-#subTitle {
-    font-size: 2.07vh;
-    position: flex-end;
-    margin-top: 0px;
-    margin-bottom: 70px;
-}
+} */
+/* 
+ */
 #header2 {
     background-color: rgba(255, 255, 255, .25);
     color: white;
@@ -236,12 +243,12 @@ li {
     justify-content: space-between;
     padding: 20px;
 }
-#subheader {
+/* #subheader {
     align-self: center;
     opacity: 90%;
     font-size: 1.9vh;
     font-family: 'julius sans one', sans-serif;
-}
+} */
 .arrow {
     opacity: 70%;
     align-self: center;
@@ -257,7 +264,7 @@ li {
     margin-bottom: 15px;
 }
 p {
-    font-size: .85em;
+    font-size: .65em;
     line-height: 2.05;
     margin: auto;
     display: block;
@@ -298,8 +305,26 @@ h3 {
     }
     #header1 {
         grid-template-rows: 1 / 2;
+        height: 28.5vh;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        contain: content;
+    } 
+    #wholeTitle {
+        height: 19vh;
+        contain: content;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 115px;
     }
-    
+    #subTitle {
+        font-size: 2.07vh;
+        position: flex-end;
+        margin-top: 0px;
+        margin-bottom: 70px;
+    }
     #intro1 {
         grid-row: 2 / 3;
     }
@@ -355,21 +380,39 @@ h3 {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        float: left;
-    }
+        width: 55%;
+        padding-bottom: 5%;
+    } 
     #title {
-        font-size: 2em;
+        font-size: 2.7em;
+        display: inline-flex;
+        margin-block-start: 15%;
+        margin-block-end: 0;
+        padding: 0 0 25% 0;
     }
     #subTitle {
-        font-size: 1.5em;
+        font-size: 1.3em;
+        margin-block-start: 0;
+        margin-block-end: 2em;
+        padding: 23% 0 14% 10%;
+        display: inline-flex;
+        position: absolute;
     }
+    #enso {
+        height: 7vh;
+        padding: 6% 0 25.5% 0%;
+        display: inline-flex;
+        margin-block-start: 3em;
+        margin-block-end: 0;
+    }
+    
     #header2 {
         height: 3vh;
         font-size: 1em;
         line-height: 2;
     }
     #subheader {
-        font-size: 1.2em;
+        font-size: 1.15em;
     }
     #intro1 {
         grid-row: 2 / 3;
@@ -410,10 +453,13 @@ h3 {
         font-size: 1em;
     }
     .pTitle {
-        font-size: 1.3em;
+        font-size: 1em;
         line-height: 1;
         margin-bottom: .7em;
-        margin-top: 2em;
+        margin-top: 3em;
+    }
+    #enso {
+        display: inline;
     }
 
 }
