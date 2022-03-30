@@ -111,7 +111,7 @@ p {
 }
 #creditText {
     width: 80%;
-    font-size: 4em;
+    font-size: 1.7em;
     font-family: 'Libre Baskerville', serif;
     font-style: italic;
     color:rgba(255, 255, 255, .39);
@@ -269,6 +269,25 @@ p {
     margin-top: 5em;
     margin: auto;
 }
+#p2 {
+    display: none;
+}
+h3 {
+    font-size: 1.7em;
+    line-height: 2em;
+    width: 80%;
+    color: #2e484c;
+}
+.julius {
+    font-weight: normal;
+}
+#footer {
+    font-size: 3.7em;
+    letter-spacing: 1em;
+    height: 100%;
+    border: none;
+}
+
 
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -290,12 +309,6 @@ p {
     #p2 {
         display: none;
     }
-    h3 {
-        font-size: 1.7em;
-        line-height: 2em;
-        width: 80%;
-        color: #2e484c;
-    }
     .julius {
         font-weight: normal;
     }
@@ -308,10 +321,6 @@ p {
     }
     #footer {
         grid-row: 6 / 7;
-        font-size: 3.7em;
-        letter-spacing: .3em;
-        height: 100%;
-        border: none;
     }
     #intro2 {
         grid-row: 7 / 8;
@@ -319,6 +328,11 @@ p {
     }
     #participation2 {
         grid-row: 8 / 9;
+    } 
+    #creditText {
+        width: 80%;
+        font-size: 4em;
+    }  
 }
     
     /* iPads (portrait and landscape) ----------- */
@@ -327,13 +341,81 @@ p {
     #container {
         grid-template-rows: 230px, auto, auto, auto, auto, 122px, auto, auto;
     }
-    #wholeTitle {
-        height: 19vh;
-        contain: content;
-        text-align: center;
-        align-items: center;
-        margin-bottom: 115px;
+    .arrow {
+        font-family: 'verdemoderna', sans-serif;
     }
+    #header1 {
+        grid-row: 1 / 2;
+        height: 18vh;
+        contain: content;
+        border-top: 1vh;
+        border-top: rgba(19, 67, 71, 0.9) solid 10px;
+    }
+    #wholeTitle {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        float: left;
+    }
+    #title {
+        font-size: 2em;
+    }
+    #subTitle {
+        font-size: 1.5em;
+    }
+    #header2 {
+        height: 3vh;
+        font-size: 1em;
+        line-height: 2;
+    }
+    #subheader {
+        font-size: 1.2em;
+    }
+    #intro1 {
+        grid-row: 2 / 3;
+    }
+    #participation1 {
+        grid-row: 3 / 4;
+    }
+    #requirements {
+        grid-row: 4 / 5;
+    }
+    #credits {
+        grid-row: 5 / 6;
+    }
+    #footer {
+        grid-row: 6 / 7;
+    }
+    #intro2 {
+        grid-row: 7 / 8;
+    }
+    #requirements2 {
+        grid-row: 8 / 9;
+    }
+    #footer {
+        background-color: #134347;
+        color: rgba(255, 255, 255, .5);
+        text-align: center;
+        font-family: 'verdemoderna', sans-serif;
+        font-size: 30px;
+        -webkit-font-smoothing: antialiased;
+    }
+    #p2 {
+        display: block;
+    }
+    #resources {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    .pTitle {
+        font-size: 1.3em;
+        line-height: 1;
+        margin-bottom: .7em;
+        margin-top: 2em;
+    }
+
 }
     /* Desktops and laptops ----------- */
     @media only screen  and (min-width : 1132px) {
@@ -358,4 +440,5 @@ p {
 		url('verdemoderna.svg#verdemoderna') format('svg');
 	font-weight: normal;
 	font-style: normal;
-}  
+}
+}
