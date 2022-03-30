@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: rgba(19, 67, 71, 0.9) solid 25px;
+    border-top: rgba(19, 67, 71, 0.9) solid 1vh;
     font-size: 100%;
     height: 100%;
     
@@ -50,7 +50,7 @@ body {
     opacity: 65%;
     display: flex;
 }
-#header2 {
+#intro2background{
     display: flex;
     flex-direction: row;
     color: white;
@@ -65,7 +65,6 @@ body {
     opacity: 90%;
     font-size: 1.9vh;
     -webkit-font-smoothing: antialiased;
-    }
 }
 .arrow {
     font-family: 'verdemoderna';
@@ -295,8 +294,6 @@ h3 {
     border: none;
 }
 
-
-
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* Styles */
@@ -311,6 +308,8 @@ h3 {
         flex-direction: column;
         justify-content: center;
         contain: content;
+        -webkit-font-smoothing: antialiased;
+
     } 
     #wholeTitle {
         height: 19vh;
@@ -358,11 +357,15 @@ h3 {
         width: 80%;
         font-size: 4em;
     }  
+    #intro2background {
+        text-align: center;
+        justify-content: center;
+    }
 }
-    
-    /* iPads (portrait and landscape) ----------- */
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    /* Styles */
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
     #container {
         grid-template-rows: 230px, auto, auto, auto, auto, 122px, auto, auto;
     }
@@ -374,7 +377,10 @@ h3 {
         height: 18vh;
         contain: content;
         border-top: 1vh;
-        border-top: rgba(19, 67, 71, 0.9) solid 10px;
+        border-top: rgba(19, 67, 71, 0.9) solid 1vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #wholeTitle {
         display: flex;
@@ -410,6 +416,18 @@ h3 {
         height: 3vh;
         font-size: 1em;
         line-height: 2;
+        align-self: center;
+        justify-content: center;
+        margin: auto;
+        display: flex;
+    }
+    #intro2background {
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        display: flex;
+        position: absolute;
+        margin: 13% 0 0 0;
     }
     #subheader {
         font-size: 1.15em;
@@ -461,21 +479,171 @@ h3 {
     #enso {
         display: inline;
     }
+} 
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1025px) and ( max-width : 4000px) {
+/* Styles */
+    #container {
+        grid-template: 66vw, 34vw / 15vh, auto, auto, auto, 320px, 152px;
+    }
+    #header1 {
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+        display: grid;
+        background-size: auto, auto, auto, cover;
+        contain: content;
+        height: 29vh;
+        border-top: rgba(19, 67, 71, 0.9) solid 9px;
+    }
+    #wholeTitle {
+        /* width: 100%; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        contain: content;
+        text-align: left;
+        position: absolute;
+        height: 25vh;
+        width: 66vw;
+    }
+    #subTitle {
+        font-size: 1.3em;
+        display: block;
+        margin: 4% 9% 0 1%;
+        position: absolute;
+    }
+    #title {
+        display: inline-flex;
+        padding: 0 15% 4% 26%;
+        font-size: 2.5em;
+    }
+    #enso {
+        position: absolute;
+        padding: 0 70% 0 10%;
+        height: 15vh;
+        display: inline-flex;
+        margin: 0;
+    }
+    #header2 {
+        width: 20vw;
+        align-items: flex-end;
+        justify-content: flex-end;
+        text-align: center right;
+        position: absolute;
+        margin: auto;
+        margin-bottom: 27%;
+        margin-right: 10%;
+        height: 3vh;
+        background-color: rgba(255, 255, 255, .1);
+    }
+        
+    #intro2background {
+        background-color:rgba(19, 67, 71, 0.3);
+        height: 39vh;
+        width: 34vw;
+        position: fixed;
+        display: flex;
+        flex-direction: row-reverse;
+        margin-left: 66vw;
+    }
+    #intro1 {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+    #intro2 {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        columns: 1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 34vw;
+    }
+    #subheader {
+        padding: 0 0 0 3vh;
+        font-size: 1em;
+    }
+    #rightArrow {
+        align-self: right;
+        justify-self: right;
+        margin: 0 0 0 5%;
+    }
+    #leftArrow {
+        display: none;
+    }
+    #p2 {
+        display: block;
+    }
+    #participation1 {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+    #participation2 {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+        width: 34vw;
+    }
+    #requirements1 {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+    #requirements2 {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+        width: 34vw;
+    }
+    #credits {
+        grid-row: 5 / 6;
+        grid-column: 1 / 3;
+    }
+    #footer {
+        grid-row: 6 / 7;
+        grid-column: 1 / 3;
+    }
+    ul {
+        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    li {
+        border-bottom: solid 1px rgba(92, 109, 101, .2);
+        
+    }
+    #resources {
+        display: flex;
+        flex-direction: column;
+        font-size: 1em;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin: 15% 0 0 0;
+    }
+    .listItem {
+        width: 100%;
+        font-size: .9em;
+        padding: 6.6% 0 6.6% 10%;
+    }
+    #resources li:last-child {
+        float: none;
+        width: auto;
+        border-bottom: solid 1px rgba(92, 109, 101, .2);
+        width: 100%;
+    }
+    #requirements2 {
+        background-color: #e6ede8;
+    }
+    p {
+        font-size: .8em;
+    }
+    #footer {
+        font-size: 2em;
+    }
+    #credits {
+        width: 100%;
+    }
 
 }
-    /* Desktops and laptops ----------- */
-    @media only screen  and (min-width : 1132px) {
-    /* Styles */
-    #container {
-        grid-template-columns: 66%, 34%;
-        grid-template-rows: 310px, auto, auto, auto, 320px, 152px;
-    }
-}
-    
-    /* Large screens ----------- */
-    @media only screen  and (min-width : 1824px) {
-    /* Styles */
-}
+
 /*icon font*/
 @font-face {
 	font-family: 'verdemoderna';
@@ -486,5 +654,4 @@ h3 {
 		url('verdemoderna.svg#verdemoderna') format('svg');
 	font-weight: normal;
 	font-style: normal;
-}
 }
