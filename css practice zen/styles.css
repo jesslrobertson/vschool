@@ -1,0 +1,85 @@
+.container {
+    display: grid;
+    grid-template-rows: repeat(6, 50px);
+    /* default all cells/children on the left be 2/3 the screen width, and all on the left 1/3 */
+    grid-template-columns: 2/3 , 1/3;
+}
+.left {
+    grid-column: 1 / 2;
+    width: 66%;
+}
+.right {
+    grid-column: 2 / 3;
+    width: 34%;
+}
+.full {
+    width: 100%;
+    grid-column: 1 / 3;
+}
+.authors {
+    grid-row: 2 / 3;
+}
+.participation {
+    grid-row: 3 / 4;
+    
+}
+.requirements {
+    grid-row: 4 / 6;
+}
+.credits {
+    grid-row: 5 / 6;
+    background-color: blue;
+}
+.footer {
+    grid-row: 6 / 7;
+    background-color: green;
+}
+.container > div {
+    border: solid black 2px;
+}
+#header {
+    grid-row: 1 / 2;
+}
+
+.authors {
+    background-color: lightcoral
+}
+.links {
+    background-color: lightpink
+}
+
+.footer {
+    background-color: aquamarine;
+    width: 100%;
+}
+
+@media (max-width: 900px){
+    /* use this media query to help these two cells drop to the bottom when screens are smaller */
+    .authors {
+         
+    }
+    .links {
+
+    }
+    /* container could use some help so that it's children are full screen width */
+    .container {
+        
+    }
+}
+
+/* FLEX */
+/* use flexbox to make the icons behave like css zen garden's social icons */
+.icons {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+
+.icons > div {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+}
