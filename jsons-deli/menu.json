@@ -1,0 +1,54 @@
+
+{
+    "menu": {
+        "appetizers": [
+            {
+                "edamame": ["soybeans", "maldon salt"],
+                "description": "Freshly steamed organic soybeans tossed in maldon sea salt"
+            },
+            {
+                "hummus": ["chickpeas", "olive oil", "lemon juice", "tahini", "salt", "fresh pita"],
+                "description": "House made hummus served with piping hot pita"
+            }
+        ], 
+        "cold sandwiches": [
+            {
+                "pesto avo smash": ["local sourdough", "walnut pesto", "fresh tomato", "avocado", "hummus", "spring greens", "balsamic reduction", "olive oil", "seasonings"],
+                "description": "A refreshing, satisfying sando with smashed avo, house hummus, tomato, and a delightfully rich walnut pesto"
+            },
+            {
+                "Monkey See, Monkey Do": ["brioche", "peanut butter", "banana", "cinnamon", "local raw honey"],
+                "description": "A grown-up spin on a childhood classic"
+            }
+        ], 
+        "hot sandwiches": [
+            {
+                "Not your grandma's grilled cheese": ["local sourdough", "kerrygold dubliner", "fresh tomato", "walnut pesto"],
+                "description": "A deliciously reimagined grilled cheese - vegan option available!"
+            },
+            {
+                "Fig-eta Bout It": ["local sourdough", "fig jam", "brie", "lucygold apples"],
+                "description": "Warning: this sandwich may make you forget about your previous favorite"
+            }
+        ], 
+        "desserts": [
+            {
+                "ccpbc": ["dark roast peanut butter", "dark chocolate chips"],
+                "description": "Our chocolate chip peanut butter cookie is served warm and gooey, with a glass of creamy oat milk"
+            },
+            {
+                "A lemon walks into a bar...": ["meyer lemons", "graham crackers", "local pasture raised eggs"], 
+                "description": "With just the right balance of sour and sweet, this lemon bar will knock you off your feet"
+            }
+        ], 
+        "drinks": [
+            {
+                "lavender lemonade": ["Meyer lemon juice", "agave",  "house-made lavender syrup"],
+                "description": "Lemonade just got leved-up!"
+            },
+            {
+                "Cold Brew Coffee": ["Locally roasted coffee beans"],
+                "description": "Jump start your next project with this potent brew"
+            }
+        ] 
+}   }
