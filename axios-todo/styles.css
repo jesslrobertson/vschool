@@ -1,0 +1,82 @@
+body {
+    font-family: 'Averia Serif Libre', cursive;
+    background-color: rgb(234, 252, 234);
+}
+
+#submitTodo {
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+}
+#header {
+    text-align: center;
+    margin: auto;
+}
+#pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#listDiv {
+    width: 80vw;
+    display: flex;
+}
+#todoList {
+    border: 2px solid slategray;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 50vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+li {
+    display: inline;
+    width: 70%
+}
+
+img {
+    align-self: center;
+    border: black solid 5px;
+    justify-self: center;
+    margin: 30px;
+    width: 100%;
+}
+
+input {
+    margin-bottom: 5px;
+    border-radius: 2px;
+    border:rgb(175, 176, 175) 1px solid;
+}
+#description, #imgUrl {
+    width: 90%;
+}
+#title, #price {
+    width: 44.2%;
+    display: inline;
+}
+#submit {
+    display: block;
+    justify-self: center;
+    font-family: 'Averia Serif Libre', cursive;
+    margin: auto;
+    margin-top: 10px;
+    color:rgb(234, 252, 234);
+    background-color:rgb(49, 49, 49);
+    border-radius: 5px;
+}
+.checkbox {
+    align-self: left;
+    justify-self: left;
+    width: 20%;
+    display: absolute;
+}
+/* .divider {
+    background-color: slategray;
+    height: 20px;
+    width: 50vw;
+    display: block;
+} */
