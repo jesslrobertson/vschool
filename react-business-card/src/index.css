@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #374151;
+  display: flex;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.profile-pic {
+  height: 317px;
+  width: 317px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  top: 44px;
+  padding-bottom: 0px;
+
+}
+.container {
+  background-color: #23252C;
+  height: 716px;
+  width: 317px;
+  border-radius: 10px;
+  margin-top: 100px;
+
+}
+.info-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  text-align: center;
+}
+.fullName {
+  color: white;
+  size: 25px;
+  font-weight: 700;
+  padding-top: 21px;
+  margin: 0px;
+  padding-bottom: 0px;
+  font-family: 'Inter';
+  line-height: 30px;
+  text-align: center;
+}
+.title {
+  color: #F3BF99;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.8px;
+  line-height: 15px;
+  text-align: center;
+  margin: 0;
+  padding-top: 3px;
+}
+.website {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 150%;
+  color: #F5F5F5;
+  padding-top: 8px;
+}
+.buttonDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 10px;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 115px;
+  height: 32px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 5px;
+}
+.email-button {
+  background-color: white;
+  margin-left: 30px;
+  
+}
+.linkedin-button {
+  background-color: #5093E2;
+  color: white;
+  margin-right: 30px;
+}
+.email-icon {
+  width: 16px;
+  height: 16px;
+  top: 9px;
+  margin: 0px 5px;
+}
+.linkedin-icon {
+  width: 16px;
+  height: 16px;
+  left: 16px;
+  top: 9px;
+  margin: 0px 5px;
+}
+.info-box {
+  color: #f5f5f5;
+  width: 245px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 36px;
+}
+.subsection {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 0;
+  padding-top: 20px;
+}
+.subsection-p {
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 150%;
+  margin: 0;
+}
+.interests-p {
+  padding-bottom: 24px;
+}
+.footer {
+  background-color: #161619;
+  height: 64px;
+  width: 317px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.icon-box {
+  width: 190px;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.icon {
+  height: 25px;
+  opacity: 60%;
+  margin: auto;
+}
+
