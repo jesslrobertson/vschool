@@ -1,20 +1,18 @@
-import kZaferes from '../images/katie-zaferes.png'
-import star from '../images/star.png'
 
-export default function Card(){
-    return(
+export default function Card({ card }) {
+    const { coverImg, stats, location, title, price } = card
+
+    return (
         <div className="cardContainer">
-            <img className="cardImg" src={kZaferes}></img>
-            <div className="statusFlag">
-                <p>Sold Out</p>
-            </div>
+            <img src={`../images/${coverImg}`} className="cardImg" />
             <div className="ratings">
-                <img className="star" src={star}></img>
-                <p className="ratings-p">5.0 <span className="grey">(6)•USA</span>
-                </p>
+                <img src="/images/star.png" className="star" />
+                <span>{stats.rating}</span>
+                <span className="grey">({stats.reviewCount}) •   </span>
+                <span className="grey"> { location}</span>
             </div>
-            <p className="description">Life lessons with Katie Zaferes</p>
-            <p className="price"><span className="bold">From $136</span> / person</p>
+            <p className="description">{title}</p>
+            <p className="price"><span className="bold">From ${price}</span> / person</p>
         </div>
     )
 }

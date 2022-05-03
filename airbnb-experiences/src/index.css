@@ -68,8 +68,8 @@ code {
 }
 .cardImg {
   max-width: 30vw;
-  padding-top: 6vh;
-  
+  /* padding-top: 6vh; */
+  border-radius: 10px;
 }
 .statusFlag {
   background-color: white;
@@ -82,16 +82,16 @@ code {
 }
 .ratings {
   display: flex;
+  margin-top: 5px;
 }
 .star {
   width: 17px;
   height: 17px;
-  margin-top: 15px;
   margin-right: 5px;
   margin-bottom: 0;
 }
 .description {
-  margin-top: 0;
+  margin-top: 10px;
   font-style: light;
   font-size: 1.75vh;
   line-height: 10px;
