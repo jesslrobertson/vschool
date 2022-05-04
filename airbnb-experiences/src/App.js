@@ -11,7 +11,9 @@ function App() {
     <div className="container">
       <Header />
       <Hero />
-      {Data.map(card => <Card card={card} key={card.id} /> )}
+      <section className="card-list">
+        {Data.map(card => <Card card={card} key={card.id} /> )}
+      </section>
     </div>
   );
 }

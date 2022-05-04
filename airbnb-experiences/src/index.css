@@ -46,6 +46,8 @@ code {
   font-size: 6vh;
   line-height: 110%;
   padding-left: 5vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .p {
   font-family: 'Poppins';
@@ -62,24 +64,30 @@ code {
   color: #918E9B;
 }
 .cardContainer {
-  padding: 20px 20px 40px 40px;
-  display: flex;
-  flex-direction: column;
+  width: 175px;
+  height: 302px;
+  font-size: 12px;
+  flex: 0 0 auto;         
+  display: flex;          
+  flex-direction: column; 
+  position: relative;
 }
 .cardImg {
-  max-width: 30vw;
-  /* padding-top: 6vh; */
-  border-radius: 10px;
+  width: 100%;
+  height: 235px;
+  border-radius: 9px;
+  margin-bottom: 9px;
 }
-.statusFlag {
-  background-color: white;
+.card-badge {
   position: absolute;
-  padding-top: 120px;
-  border-radius: 5px;
-  width: 61px;
-  height: 20px;
-  display: flex;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: normal;
 }
+
 .ratings {
   display: flex;
   margin-top: 5px;
@@ -101,5 +109,10 @@ code {
 .price {
   font-size: 1.75vh;
   margin-top: 0;
-
+}
+.card-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
 }

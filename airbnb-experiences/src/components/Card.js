@@ -1,9 +1,16 @@
 
 export default function Card({ card }) {
-    const { coverImg, stats, location, title, price } = card
-
+    const { coverImg, stats, location, title, price, openSpots } = card;
+    let badgeText
+    if (openSpots === 0) {
+        badgeText = "SOLD OUT"
+    } else if (location === "Online") {
+        badgeText = "ONLINE"
+    }
+    
     return (
         <div className="cardContainer">
+            {badgeText && <div className="card-badge">{badgeText}</div>}
             <img src={`../images/${coverImg}`} className="cardImg" />
             <div className="ratings">
                 <img src="/images/star.png" className="star" />
