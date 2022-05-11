@@ -1,0 +1,101 @@
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  font-family: 'Oxygen', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #C6E8F5;
+}
+
+header {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  height: 8rem;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 6px 17px -1px rgba(22,42,54,0.13);
+  -webkit-box-shadow: 1px 6px 17px -1px rgba(22,42,54,0.13);
+  -moz-box-shadow: 1px 6px 17px -1px rgba(22,42,54,0.13);
+}
+.page-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3rem;
+}
+
+.list-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.friend-pet-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  height: 15rem;
+  width: 20rem;
+  border-radius: 10px;
+  margin: 10px;
+  overflow: hidden;
+  box-shadow: 1px 6px 17px -1px rgba(22,42,54,0.13);
+  -webkit-box-shadow: 1px 6px 17px -1px rgba(22,42,54,0.13);
+  -moz-box-shadow: 1px 6px 17px -1px rgba(22,42,54,0.13);
+}
+
+.friend-container {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 20rem;
+  height: 3rem;
+  /* background-color: rgba(0,147,233, .5); */
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  color: #fafafa;
+  align-items: center;
+  justify-content: space-between;
+}
+.friend-container > * {
+  margin: 10px;
+  padding: 0;
+}
+.pet-container {
+  box-sizing: border-box;
+  width: 20rem;
+  /* height: 12rem; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #162A36;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: auto;
+}
+.pet-container > * {
+  margin: 0;
+  padding-top: 5px;
+}
+.friend-name {
+  font-size: 2rem;
+}
+.pet-name {
+  font-size: 1.5rem;
+  padding-left: 10px;
+}
+.pet-breed {
+  padding-right: 10px;
+  font-size: 1rem;
+  color: #7D9EB5;
+
+}
