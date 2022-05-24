@@ -5,7 +5,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
   overflow: scroll;
+  min-height: 100%;
 }
+
 html {
   font-size: 20px;
 }
@@ -61,6 +63,7 @@ header {
   overflow-x: scroll;
   width: 80%;
   margin: auto;
+  padding-bottom: 200px;
 }
 .main-tagline {
   font-size: 4rem;
@@ -134,7 +137,9 @@ footer {
   align-times: center;
   justify-content: center;
   height: 5rem;
-  position: absolute;
+  position: relative;
+  margin-top: 100px;
   bottom: 0;
+  overflow: hidden;
 }
 
