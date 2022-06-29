@@ -17,11 +17,11 @@ export default function Meme() {
             randomImage: allMemes[randomNumber].url
         }))
     }
-useEffect(() => {
-    fetch("https://api.imgflip.com/get_memes")
-        .then(res => res.json())
-        .then(data => setAllMemes(data.data.memes))
-        .catch(err => console.log(err))
+    useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setAllMemes(data.data.memes))
+            .catch(err => console.log(err))
 }, [])
 
     return(
