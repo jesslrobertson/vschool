@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+}
+
+
+footer {
+  bottom: 0;
+  height: 200px;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+  position: fixed;
+  width: 100%;
+}
+header {
+  height: 100px;
+  background-color: azure;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  color: blue;
+}
+
+.title {
+  width: 450px;
+}
+
+nav {
+  width: 90%
+}
+.nav-links {
+  margin-left: 60%;
+}
+
+.nav-link {
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.home-container {
+  display: flex;
+  align-items: center;
+}
+
+.main-container {
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: azure;
+  flex-direction: column;
+  margin: 40px;
+  padding: 40px;
+}
+
+img {
+  width: 80%;
+  object-fit: cover;
+}
+
+h2 {
+  margin-top: 0;
+}
