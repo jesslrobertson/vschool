@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 export default function Nav() {
   
   return (
-    <Router className="link-box">
       <nav style={{ margin: 10 }}>
         <Link to="/" style={{ padding: 5 }} className='title'>
           Voyage
@@ -18,6 +17,5 @@ export default function Nav() {
           Random NASA Image
         </Link>
       </nav>
-    </Router>
   )
 }
