@@ -48,7 +48,17 @@
 
 // console.log(balanced('hannah'))
 
+function subsequence(nums, k) {
+    let sortedNums = nums.sort(function(a, b){return b - a});
+    console.log(sortedNums)
+    const largestNums = sortedNums.slice(0, k)
+    const total = largestNums.reduce(function (x, y) {
+        return x + y;
+        }, 0);
+    console.log(`The largest subsequence is ${largestNums} for a total of ${total}`)
+}
 
+subsequence([3,4,3,3], 2)
 
 
 
