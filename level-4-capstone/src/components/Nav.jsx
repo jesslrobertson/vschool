@@ -5,7 +5,7 @@ export default function Nav() {
   return (
       <nav style={{ margin: 10 }}>
         <Link to="/" style={{ padding: 5 }} className='title'>
-          Voyage
+          VOYAGE
         </Link>
         <Link to="/apod" style={{ padding: 5 }} className='header-link'>
           Astronomy Picture of the Day
@@ -17,5 +17,7 @@ export default function Nav() {
           Random NASA Image
         </Link>
       </nav>
+
+      
   )
 }

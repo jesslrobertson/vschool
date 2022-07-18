@@ -1,8 +1,10 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  margin: 0;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -15,5 +17,50 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  margin: 0;
+}
 
+.title {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  margin: 20px;
+}
 
+.header-home {
+  color: white;
+  background-color: #111820;
+  height: 4rem;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-bar {
+  width: 65%;
+  height: 2rem;
+  background-color: white;
+  color:#111820;
+  border: none;
+  border-radius: 10px;
+}
+.search-button {
+  background-color: #3b90cb;
+  margin: 10px;
+  height: 2rem;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+}
