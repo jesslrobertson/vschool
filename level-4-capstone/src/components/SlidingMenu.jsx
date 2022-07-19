@@ -7,7 +7,6 @@ export default function SlidingMenu() {
 
   function toggleMenu() {
     setShowMenu(prev => !prev)
-    console.log(showMenu)
   }
 
   function hoverState(){

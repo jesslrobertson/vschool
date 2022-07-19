@@ -6,8 +6,7 @@ import HeaderHome from './components/HeaderHome'
 
 
 function App() {
-  const [count, setCount] = useState(0);
-
+	
   return (
 		<Router>
 			<div className="App">

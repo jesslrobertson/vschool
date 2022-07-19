@@ -48,10 +48,12 @@
 .show {
   transform: translate3d(0vw, 0, 0);
   overflow: hidden;
-  animation-duration: .7s;
-  animation-name: slide-in;
-  transition-timing-function: ease-in-out;
-  display: block;
+  animation-duration: 1s;
+  animation-name: slide-out;
+  transition-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
 }
 
 .hide {
@@ -59,14 +61,27 @@
   animation-duration: 1s;
   animation-name: slide-away;
   transition-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
 }
 
-@keyframes slide-in {
+@keyframes slide-out {
   from { transform: translate3d(+100vw, 0, 0 ) }
-  to { transform: translate3d(0vw, 0 0 )}
+  to { transform: translate3d(0vw, 0, 0 )}
 }
 
 @keyframes slide-away {
   from { transform: translate3d(0vw, 0, 0 ) }
   to { transform: translate3d(+100vw, 0 0 )}
+}
+
+@-webkit-keyframes slide-out {
+  0% { transform: translate3d(+100vw, 0, 0 ) }
+  100% { transform: translate3d(0vw, 0, 0 )}
+}
+
+@-webkit-keyframes slide-away {
+  0% { transform: translate3d(0vw, 0, 0 ) }
+  100% { transform: translate3d(+100vw, 0, 0 )}
 }
