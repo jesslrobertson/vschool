@@ -1,12 +1,11 @@
 import React, {useEffect, useState, useContext} from "react";
 import styles from '../pages/Splash.module.css'
-import axios from 'axios';
 import { SearchContext } from './SearchContext'
 
 export default React.memo(function Search() {
   const [searchValue, setSearchValue] = useState("")
 
-  const { results, searchNasa } = useContext(SearchContext)
+  const { searchNasa } = useContext(SearchContext)
 
   function handleChange(e) {
     setSearchValue(e.target.value)
