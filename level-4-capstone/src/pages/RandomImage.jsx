@@ -12,17 +12,22 @@ export default React.memo(function RandomImage() {
         setImgData(res.data[0])
       })
       .catch(err => console.err(err))
-    console.log('refresh')
-  }, [])
+  }, [getNew])
 
-  /*todo:
-  write function to ensure an img file is returned
+  useEffect(function (){
+    setGetNew(false)
+  },[imgData])
 
-  create button to get a new random image */
-
+  function NewImage(){
+    setGetNew(true);
+  }
+  
   return (
     <div className='img-box'>
-      <h2 className='page-title'>Random Image</h2>
+      <div className='title-box'>
+        <h2 className='page-title'>Random Image</h2>
+        <button onClick={NewImage}>Another?</button>
+      </div>
       <SingleImage imgData={ imgData } />
     </div>
   );

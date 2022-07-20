@@ -12,7 +12,6 @@ const Image = (props ) => {
   const unsetFlag = () => {
     setZoom(false)
   }
-  console.log(zoom)
 
     return (
       <>

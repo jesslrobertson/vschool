@@ -2,7 +2,6 @@
 .splash_page {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   background: url('src/assets/carina-nebula.png') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -12,15 +11,23 @@
   height: 100vh;
   margin: 0;
 }
+
+.content_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 80vh;
+}
 .quote_box {
   width: 70vw;
   max-width: 1000px;
   height: 35vh;
   max-height: 600px;
-  margin-top: 17vh;
   text-shadow: #080645 1px 3px 5px, 3px 1px 0px rgba(14,39,122,0);
   opacity: 100%;
   margin-bottom: 0;
+  margin-top: 10vh;
 }
 
 .quote {
@@ -28,14 +35,26 @@
   line-height: 1.1;
   letter-spacing: -0.5px;
   text-align: center; 
+  margin: 0;
 }
 .quote_credit {
   padding-left: 70%;
-  margin-top: -15px;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .search_box {
-  margin-top: 1vh;
+  margin-top: 0vh;
+  margin-bottom: 3vh;
+}
+
+.about_box {
+  width: 70vw;
+  max-width: 900px;
+  background-color: rgba(29, 37, 64, .8);
+  padding: 0px 15px 0px 15px;
+  border-radius: 10px;
+  margin-bottom: 5vh;
 }
 
 /* ----------- Non-Retina Screens ----------- */
