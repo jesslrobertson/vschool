@@ -6,9 +6,10 @@ export default React.memo(function APOD() {
   const [imgData, setImgData] = useState('');
 
   useEffect(function() {
-  axios.get('https://api.nasa.gov/planetary/apod?api_key=nKFs6NmmEclwkFJCBf99pXLIzsFsLTaa5lzt9Thu')
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=nKFs6NmmEclwkFJCBf99pXLIzsFsLTaa5lzt9Thu')
     .then(res => setImgData(res.data))
     .catch(err => console.err(err))
+    //.finally
   }, [])
 
   return (

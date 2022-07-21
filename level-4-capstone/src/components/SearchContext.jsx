@@ -4,20 +4,33 @@ import axios from 'axios'
 const SearchContext = React.createContext()
 
 function SearchProvider(props) {
-  const [results, setResults] = useState("")
+  const [results, setResults] = useState([])
 
   function searchNasa(value) {
     const query = value.split(" ").join("%");
 
+    function getImg(res){
+      const imgData = res.data.collection.items
+        imgData.map(item => {
+          console.log(item.href)
+        })
+      }
+
     axios
       .get(`https://images-api.nasa.gov/search?q=${query}&media_type=image`)
       .then((res) => {
-        setResults(res.data.collection.items);
-        console.log(results);
+        const imgObjects = res.data.collection.items
+        imgObjects.forEach(item => {
+          axios.get(item.href).then(result => {
+            item.original = result.data[0]
+          })
+        })
+        setResults(imgObjects)
       })
-      .catch((err) => console.err(err));
+      .catch((err) => console.log(err));
   }
 
+  console.log(results)
 
   return (
     <SearchContext.Provider 
