@@ -14,14 +14,9 @@ export default function SearchResults() {
     <div className="page-box">
       <Search />
       <div className="results-box">
-        {results.length > 0 && (
-          <h3 className="sub-title">Click an image to learn more!</h3>
-        )}
         {results.length > 0 ? (
           <div className="gallery">
             {results.map((item) => {
-              console.log("item");
-              console.log(item);
               const { center, date_created, description, nasa_id, title } =
                 item.data[0];
               const { href } = item.links[0];
@@ -41,9 +36,7 @@ export default function SearchResults() {
             })}
           </div>
         ) : (
-          <h3 className="try-again">
-            That search didn't return any results. Try again?
-          </h3>
+          <h3 className="try-again">Search away!</h3>
         )}
       </div>
     </div>

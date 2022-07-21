@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import SlidingMenu from './SlidingMenu'
 
 export default function Header() {
-  const [isHome, setIsHome] = useState(true);
-
   return (
     <header className="header-home">
-      <h1 className="title">VOYAGE</h1>
+      <Link to="/" className='title'>
+        <h1 className="title">VOYAGE</h1>
+      </Link>
       <SlidingMenu />
     </header>
   );

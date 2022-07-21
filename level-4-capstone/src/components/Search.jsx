@@ -60,7 +60,7 @@ export default React.memo(function Search() {
           : searchButton
           }
       </div>
-      {previousSearch && <h5 className='previous-search'>Your search for "{previousSearch}" returned...</h5>}
+      {previousSearch && <h5 className='previous-search'>Your search for "{previousSearch}" returned the following results. Click an image to learn more!</h5>}
     </div>
   );
 })

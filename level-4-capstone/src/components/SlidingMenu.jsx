@@ -37,11 +37,11 @@ export default function SlidingMenu() {
             NASA Astrononmy Image of the Day
           </Link >
         </div>
-        <div className="link-container">
+        {/* <div className="link-container">
           <Link to="/jwst" className='nav-link'>
             James Webb Space Telescope Gallery
           </Link >
-        </div>
+        </div> */}
         <div className="link-container">
           <Link to="/randomimage" className='nav-link'>
             Random Image
