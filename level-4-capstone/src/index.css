@@ -105,6 +105,7 @@ button {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .title-box {
@@ -125,12 +126,16 @@ button {
 
 .image-items {
   font-family: 'Nunito Sans', sans-serif;
-  margin: 1em;
-  width: 30vw;
+  max-width: 23vw;
   padding: 1em;
+  margin-top: 1em;
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.image-items > * {
+  max-width: 20vw;
 }
 
 .img-title {
@@ -258,3 +263,44 @@ footer > * {
   text-decoration: none;
   color: white;
 }
+
+/* tablet styles*/
+
+/* ipad pro portrait */ 
+@media only screen and (max-width: 1024px) and (max-width: 1366px) {
+  .single-img-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .image-items > * {
+    min-width: 85vw;
+    display: flex;
+  }
+  .search-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .search-bar {
+    width: 65vw;
+    height: 3rem;
+    font-size: 1.3rem;
+  }
+  button {
+    height: 3rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  
+
+
+}
+
+
+/* Beginning Laptop Styles */
+
+
+

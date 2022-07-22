@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export default function Thumbnail(props) {
   const [showLarge, setShowLarge] = useState(false);
-  const { thumbnail, original, center, date, description, id, title } = props;
+  const { thumbnail, original, center, date, description, title } = props;
 
   console.log(original);
 

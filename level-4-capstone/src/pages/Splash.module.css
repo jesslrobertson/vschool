@@ -56,8 +56,30 @@
   border-radius: 10px;
   margin-bottom: 5vh;
 }
+/* tablet styles */
+/*ipad pro, landscape */
+@media only screen and (max-width: 1024px) and (max-width: 1366px) {
+  .quote_box {
+    width: 80vw;
+    max-width: 1000px;
+    margin-bottom: 0;
+  }
+  .quote {
+    font-size: 3.5rem; 
+    margin: 0;
+  }
+  .quote_credit {
+    padding-left: 80%;
+    font-size: 1.3rem;
+  }
+  .about_box {
+    width: 75vw;
+    margin-bottom: 10vh;
+    font-size: 1.2rem;
+  }
 
-/* ----------- Non-Retina Screens ----------- */
+}
+/* ----------- Non-Retina Screens -----------
 @media screen 
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
@@ -65,9 +87,9 @@
     .quote_box {
       margin-top: 15vh;
     }
-}
+} */
 
-/* ----------- Retina Screens ----------- */
+/* ----------- Retina Screens -----------
 @media screen 
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
@@ -76,4 +98,4 @@
     .quote_box{
       margin-top: 15vh;
     }
-}
+} */
