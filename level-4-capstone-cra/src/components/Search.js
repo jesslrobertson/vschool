@@ -4,10 +4,10 @@ import styles from '../pages/Splash.module.css'
 import { SearchContext } from './SearchContext'
 
 export default React.memo(function Search() {
+  const { searchNasa, previousSearch, setPreviousSearch } = useContext(SearchContext)
   const [searchValue, setSearchValue] = useState("")
   const location = useLocation()
   const navigate = useNavigate()
-  const { searchNasa, previousSearch, setPreviousSearch } = useContext(SearchContext)
 
   function handleChange(e) {
     setSearchValue(e.target.value)
@@ -22,7 +22,6 @@ export default React.memo(function Search() {
     location.pathname === "/" && navigate("/search")
   }
 
-  
   return (
     <div className='search-statement'>
       <form 
@@ -39,7 +38,7 @@ export default React.memo(function Search() {
           />
         <button>Blast Off!</button>
       </form>
-      {previousSearch && <h5 className='previous-search'>Your search for "{previousSearch}" returned the following results. Click an image to learn more!</h5>}
+      {previousSearch && location.pathname === "/search" && <h5 className='previous-search'>Your search for "{previousSearch}" returned the following results. Click an image to learn more!</h5>}
     </div>
   );
 })

@@ -4,12 +4,11 @@ import MenuButton from './MenuButton'
 
 export default function SlidingMenu() {
   const [showMenu, setShowMenu] = useState(false)
+  const visibility = showMenu ? 'show' : 'hide'
 
   function toggleMenu() {
     setShowMenu(prev => !prev)
   }
-
-  const visibility = showMenu ? 'show' : 'hide'
 
   return (
     <div className="nav-container">
