@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import axios from 'axios'
 
 const SearchContext = React.createContext()
@@ -6,10 +6,10 @@ const SearchContext = React.createContext()
 function SearchProvider(props) {
   const [results, setResults] = useState([])
   const [original, setOriginal] = useState("")
+  const [previousSearch, setPreviousSearch] = useState("")
 
   function searchNasa(value) {
     const query = encodeURIComponent(value);
-    console.log(query)
 
     axios.get(`https://images-api.nasa.gov/search?q=${query}&media_type=image`)
       .then((res) => {
@@ -20,7 +20,7 @@ function SearchProvider(props) {
   }
 
   function filterJWST(array){
-    return array.filter(item => item.data[0].center != "STScI (Hubble)")
+    return array.filter(item => item.data[0].center !== "STScI (Hubble)")
   }
 
   function getJWSTImages(){
@@ -50,7 +50,9 @@ function SearchProvider(props) {
             getImg,
             original,
             setOriginal,
-            getJWSTImages
+            getJWSTImages,
+            previousSearch,
+            setPreviousSearch
         }}>
         {props.children}
     </SearchContext.Provider>

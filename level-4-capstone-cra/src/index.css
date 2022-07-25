@@ -305,8 +305,7 @@ footer > * {
   }
   /* portrait */
 @media only screen 
-  and (max-width: 412px)
-  and (max-height: 914px){
+  and (max-width: 412px){
     .title {
       margin: 1rem;
       padding: 0;
@@ -444,12 +443,15 @@ and (orientation: portrait) {
     width: auto;
   }
 
+  footer {
+    flex-direction: row;
+  }
+
 }
 /* Laptop Styles */
 @media only screen 
   and (max-width: 1300px)
-  and (min-width: 1024px)
- {
+  {
   .page-title {
     font-size: 1.7rem;
   }
@@ -466,6 +468,19 @@ and (orientation: portrait) {
 
   .single-img-box {
     max-width: 95vw;
+  }
+
+  .image-items {
+    min-width: 23vw;
+    padding: 1rem;
+  }
+
+  .image-items > * {
+    min-width: 23vw;
+  }
+
+  footer {
+    flex-direction: row;
   }
 
 }
@@ -488,6 +503,10 @@ and (min-width: 1300px) {
   .search-bar {
     height: 1.7rem;
     font-size: 1rem;
+  }
+
+  footer {
+    flex-direction: row;
   }
 }
 

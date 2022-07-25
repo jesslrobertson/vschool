@@ -1,51 +1,33 @@
-import React, { useState, useContext} from "react";
-import { Link, useLocation } from 'react-router-dom'
+import React, { useState, useContext } from "react";
+import { useLocation, useNavigate } from 'react-router-dom'
 import styles from '../pages/Splash.module.css'
 import { SearchContext } from './SearchContext'
 
 export default React.memo(function Search() {
   const [searchValue, setSearchValue] = useState("")
-  const [previousSearch, setPreviousSearch] = useState("")
-
-  const { searchNasa } = useContext(SearchContext)
+  const location = useLocation()
+  const navigate = useNavigate()
+  const { searchNasa, previousSearch, setPreviousSearch } = useContext(SearchContext)
 
   function handleChange(e) {
     setSearchValue(e.target.value)
   }
 
-  const linkButton = 
-    <Link to="/search">
-      <button
-        className="search-button"
-        onClick={() => {
-          searchNasa(searchValue)
-          setSearchValue("")
-          }
-        }
-      >
-        Blast Off!
-      </button>
-    </Link>
+  function handleSubmit(e){
+    e.preventDefault()
 
-  const searchButton =
-    <button 
-    className="search-button"
-    onClick={() => {
-      searchNasa(searchValue)
-      setPreviousSearch(searchValue);
-      setSearchValue("")
-      }
-    }
-    >
-      Blast Off!
-    </button>
+    searchNasa(searchValue)
+    setPreviousSearch(searchValue)
+    setSearchValue("")
+    location.pathname === "/" && navigate("/search")
+  }
+
   
-  const location = useLocation()
-  console.log(location.pathname)
-
   return (
     <div className='search-statement'>
-      <div className={`${styles.search_box} search-box`}>
+      <form 
+      className={`${styles.search_box} search-box`}
+      onSubmit={handleSubmit}>
         <input 
           placeholder="explore..." 
           className='search-bar' 
@@ -55,11 +37,8 @@ export default React.memo(function Search() {
           onChange={handleChange}
           type="text"
           />
-        {location.pathname == '/'
-          ? linkButton 
-          : searchButton
-          }
-      </div>
+        <button>Blast Off!</button>
+      </form>
       {previousSearch && <h5 className='previous-search'>Your search for "{previousSearch}" returned the following results. Click an image to learn more!</h5>}
     </div>
   );

@@ -1,9 +1,9 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState } from 'react'
 import styles from './Image.module.css'
 
-const Image = (props ) => {
+const Image = (props) => {
   const [zoom, setZoom] = useState(false)
-  const { hdurl, url } = props;
+  const { hdurl, url, explanation } = props;
 
   const setFlag = () => {
     setZoom(true)
@@ -20,10 +20,19 @@ const Image = (props ) => {
             onClick={unsetFlag} 
             className={styles.lightbox}
             >
-            <img src={hdurl} className={`${styles.show_large}`} />
+            <img 
+              src={hdurl} 
+              alt ={explanation}
+              className={`${styles.show_large}`} 
+            />
           </div>
         ) : (
-          <img src={url} onClick={setFlag} className={`${styles.image}`}></img>
+          <img 
+            src={url} 
+            alt ={explanation}
+            onClick={setFlag} 
+            className={`${styles.image}`} 
+          />
         )}
       </>
     )

@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
 
-  const openInNewTab = url => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
+  // const openInNewTab = url => {
+  //   window.open(url, '_blank', 'noopener,noreferrer');
+  // };
 
   return (
     <footer>

@@ -18,7 +18,7 @@ export default function Thumbnail(props) {
 
   const largeImg = (
     <div className="search-popup" onClick={closeImage}>
-      <img className="large-image" src={original} />
+      <img className="large-image" src={original} alt={description}/>
       <div className="popup-description">
         <h3 className="img-title">{title}</h3>
         <h5 className="img-center">from {center}</h5>
@@ -30,9 +30,13 @@ export default function Thumbnail(props) {
 
   const thumbnailImg = (
     <div className="thumbnail-box" onClick={openImage}>
-      <img src={thumbnail} className="thumbnail" />
+      <img src={thumbnail} className="thumbnail" alt={description} />
     </div>
   );
 
-  return <>{showLarge ? largeImg : thumbnailImg}</>;
+  return (
+    <>
+      {showLarge ? largeImg : thumbnailImg}
+    </>
+    )
 }

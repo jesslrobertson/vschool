@@ -1,10 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import Gallery from '../components/Gallery'
 import { SearchContext } from "../components/SearchContext";
-// import SearchResults from './SearchResults';
 
 export default function JWST() {
-  const { getJWSTImages, results } = useContext(SearchContext);
+  const { getJWSTImages } = useContext(SearchContext);
 
   useEffect(function(){
     getJWSTImages()
