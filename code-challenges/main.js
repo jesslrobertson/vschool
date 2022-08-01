@@ -12,9 +12,9 @@
 //     console.log(multipleArray);
 // }
 
-// arrayOfMultiples(7, 5) 
-// arrayOfMultiples(12, 10) 
-// arrayOfMultiples(17, 6) 
+// arrayOfMultiples(7, 5)
+// arrayOfMultiples(12, 10)
+// arrayOfMultiples(17, 6)
 
 // Create a function to return the amount of potatoes there are in a string.
 // Examples
@@ -23,11 +23,11 @@
 //     let potatoArr = (string.match(/potato/g));
 //     console.log(potatoArr.length)
 // }
-// potatoes("potato") 
+// potatoes("potato")
 
-// potatoes("potatopotato") 
+// potatoes("potatopotato")
 
-// potatoes("potatoapple") 
+// potatoes("potatoapple")
 
 // const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
@@ -43,29 +43,38 @@
 //     const secondHalf = letterValueArray.slice(letterValueArray.length/2)
 //     const firstTotal = firstHalf.reduce(reducer)
 //     const secondTotal = secondHalf.reduce(reducer)
-//     return firstTotal === secondTotal ? true : false 
+//     return firstTotal === secondTotal ? true : false
 // }
 
 // console.log(balanced('hannah'))
 
-function subsequence(nums, k) {
-    let sortedNums = nums.sort(function(a, b){return b - a});
-    console.log(sortedNums)
-    const largestNums = sortedNums.slice(0, k)
-    const total = largestNums.reduce(function (x, y) {
-        return x + y;
-        }, 0);
-    console.log(`The largest subsequence is ${largestNums} for a total of ${total}`)
+// function subsequence(nums, k) {
+//     let sortedNums = nums.sort(function(a, b){return b - a});
+//     console.log(sortedNums)
+//     const largestNums = sortedNums.slice(0, k)
+//     const total = largestNums.reduce(function (x, y) {
+//         return x + y;
+//         }, 0);
+//     console.log(`The largest subsequence is ${largestNums} for a total of ${total}`)
+// }
+
+// subsequence([3,4,3,3], 2)
+
+function minMax(nums) {
+  const final = []
+  const min = Math.min(...nums)
+  const max = Math.max(...nums)
+  final.push(min, max)
+  return final
 }
 
-subsequence([3,4,3,3], 2)
 
 
+// test data
+console.log(minMax([1, 2, 3, 4, 5])); // [1, 5]
 
+console.log(minMax([2334454, 5])); // [5, 2334454]
 
+console.log(minMax([1])); // [1, 1]
 
-
-
-
-
-
+console.log(minMax([3, 10, 355, 1, 40])); // [1, 355]

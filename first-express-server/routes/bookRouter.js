@@ -11,7 +11,9 @@ const books = [
   { title: "ACT with Love", genre: "self-help", _id: uuidv4() },
 ];
 
-//Routes //
+//Routes 
+
+//get all, post one
 bookRouter.route("/")
   .get((req, res) => {
     res.send(books)
@@ -23,5 +25,23 @@ bookRouter.route("/")
     books.push(newBook);
     res.send(`Successfully added ${newBook.title} to the database`);
   });
+
+  //get one
+
+  bookRouter.get("/:bookId", (req, res) => {
+    const bookId = req.params.bookId
+    const foundBook = books.find(book => book._id === bookId)
+    res.send(foundBook)
+  })
+
+  //get by genre
+  bookRouter.get("/search/genre", (req, res) => {
+    const genre = req.query.genre
+    const filteredBooks = books.filter( book => book.genre === genre)
+    res.send(filteredBooks)
+  })
+
+  //delete one
+  bookRouter.delete("/:bookId")
 
 module.exports = bookRouter;
