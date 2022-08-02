@@ -5,11 +5,11 @@ const { v4: uuidv4 } = require("uuid");
 //practice data
 
 const tvShows = [
-  { title: "Arrested Development", _id: uuidv4() },
-  { title: "Sense 8", _id: uuidv4() },
-  { title: "The Good Place", _id: uuidv4() },
-  { title: "Adventure Time", _id: uuidv4() },
-  { title: "Midnight Mass", _id: uuidv4() }
+  { title: "Arrested Development", genre: "comedy", _id: uuidv4() },
+  { title: "Sense 8", genre: "action", _id: uuidv4() },
+  { title: "The Good Place", genre: "comedy", _id: uuidv4() },
+  { title: "Adventure Time", genre: "animation", _id: uuidv4() },
+  { title: "Midnight Mass", genre: "horror", _id: uuidv4() }
 ];
 
 //Routes //
@@ -24,7 +24,7 @@ tvShowRouter.route("/")
     newShow._id = uuidv4();
     console.log(newShow);
     tvShows.push(newShow);
-    res.send(`Successfully added ${newShow.title} to the database`);
+    res.send(newShow);
   });
 
 //get one

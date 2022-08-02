@@ -1,9 +1,11 @@
 const express = require("express");
 const app = express();
+const morgan = require("morgan")
 
 //middleware//
 
 app.use(express.json());
+app.use(morgan("dev"))
 app.use("/books", require("./routes/bookRouter.js"));
 app.use("/tvShows", require("./routes/tvShowRouter"));
 
