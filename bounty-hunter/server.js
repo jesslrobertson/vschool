@@ -1,11 +1,13 @@
 const express = require("express")
 const app = express()
+const morgan = require("morgan")
 
 
 //middleware
 
 app.use(express.json());
 app.use('/bounties', require('./bountyRouter'))
+app.use(morgan("dev"))
 
 
 

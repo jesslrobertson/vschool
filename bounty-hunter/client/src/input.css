@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  h1 {
+    @apply text-4xl
+  }
+  h2 {
+    @apply text-3xl
+  }
+  h3 {
+    @apply text-2xl
+  }
+  h4 {
+    @apply text-xl
+  }
+}
+html {
+  font-size: 16px;
+  font-family: 'Iceland', cursive;
+  margin: 0;
+  height: 100%;
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  background-image: radial-gradient(rgba(21, 94, 117, 0.75), black 120%
+  );
+  height: 100vh;
+  text-shadow: 0 0 2px #767777;
+}
+
+.App::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,0,0, 0.08),
+    rgba(0,0,0, 0.09) 1.2px,
+    transparent 1.5px,
+    transparent 2px
+  );
+}
+
+
+input {
+  border-radius: 5px;
+  width: 15vw;
+}
+
+
+
+.App {
+  margin: 0;
+  width: 95vw;
+  height: 95vh;
+  border-style: double;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+

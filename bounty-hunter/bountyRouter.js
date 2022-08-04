@@ -33,15 +33,14 @@ const bounties = [
 
 bountyRouter.route("/")
   .get((req, res) => {
-    console.log(typeof bounties[0])
     res.send(bounties);
   })
   .post((req, res) => {
     const newBounty = req.body;
     newBounty._id = uuidv4();
-    console.log(newBounty);
     bounties.push(newBounty);
-    res.send(`Successfully added ${newBounty.name} to the database`)
+    res.send(newBounty)
+    console.log(`Successfully added ${newBounty.name} to database`)
   })
 
   //get one
