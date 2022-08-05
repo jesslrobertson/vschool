@@ -17,6 +17,19 @@
   h4 {
     @apply text-xl
   }
+
+  button {
+    @apply m-1 rounded-md bg-cyan-400 p-1 text-black max-w-[7rem] h-8 self-center inline
+  }
+  input {
+    @apply h-8 self-center p-1 align-middle m-1 text-cyan-900 placeholder-cyan-700 bg-cyan-200 max-w-[12rem] 
+  }
+  /* input[type=checkbox]:checked{
+    @apply bg-cyan-700
+  }
+  input[type=checkbox] {
+    @apply bg-cyan-200 
+  } */
 }
 html {
   font-size: 16px;
@@ -51,22 +64,35 @@ html {
     transparent 2px
   );
 }
+input[type=checkbox] {
+  -webkit-appearance: none;
+  background-color:#a5f3fc;
+  padding: 3px;
+  margin: 5px;
+  border:#a5f3fc solid 4px;
+}
+input[type=checkbox]:checked {
+-webkit-appearance: none;
+background-clip: padding-box;
+background-color:#0b2e39;
+}
 
 
 input {
   border-radius: 5px;
-  width: 15vw;
 }
 
 
 
 .App {
   margin: 0;
-  width: 95vw;
-  height: 95vh;
+  width: 100vw;
+  height: 100vh;
   border-style: double;
   border-radius: 20px;
   padding: 10px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 

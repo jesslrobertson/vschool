@@ -26,7 +26,7 @@ export default function Show(props) {
       <>
         <AddShowForm 
           title={title} 
-          genre={genre} 
+          genre={genre}
           _id={_id}
           btnText="Submit Edit" 
           submit={props.editShow}

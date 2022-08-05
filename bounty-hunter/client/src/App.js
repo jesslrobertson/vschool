@@ -12,7 +12,10 @@ function App() {
       <Header />
       <Form 
         submit={addBounty}
-        btnText="Add Bounty"/>
+        btnText="Add Bounty"
+        flexDirection='row'
+        className='flex align-center justify-center w-screen m-8'
+        button='inherit'/>
       <Board />
     </div>
   );

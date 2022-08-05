@@ -1,18 +1,17 @@
-import React, {useState, useEffect, useContext, createContext} from 'react'
+import React, {useState, createContext} from 'react'
 const axios = require('axios')
 
 const ApiContext = createContext()
 
 function ApiContextProvider(props){
-  const { _id } = props
+  
   const [newBounty, setNewBounty] = useState({
     name: "",
     alignment: "",
-    status: "",
+    living: true,
     reward: 0
   })
   const [bounties, setBounties] = useState([])
-  const [updates, setUpdates] = useState()
 
   //get
   function getBounties(){
@@ -28,23 +27,25 @@ function ApiContextProvider(props){
     console.log(newBounty)
     axios.post('/bounties', newBounty)
       .then(res => {
-        console.log(res.data)
-        // getBounties()
         setBounties(prevBounties => [...prevBounties, res.data])
       })
       .catch(err => console.log(err))
   }
   //delete
   function deleteBounty(_id){
-    axios.delete('/bounties', _id)
-      .then(res => console.log(res))
+    axios.delete(`/bounties/${_id}`)
+      .then(res => {
+        setBounties(bounties.filter(bounty => bounty._id !== _id))
+      })
       .catch(err => console.log(err))
   }
 
   //update
-  function updateBounty( _id, updates){
-    axios.put(`/bounties/${_id}`, updates)
-    .then(res => console.log(res))
+  function updateBounty(inputs, _id){
+    axios.put(`/bounties/${_id}`, inputs)
+    .then(res => {
+      setBounties(prevBounties => prevBounties.map(bounty => bounty._id !== _id ? bounty : res.data))
+    })
     .catch(err => console.log(err))
   }
 
@@ -53,7 +54,6 @@ function ApiContextProvider(props){
       value={{
         newBounty: newBounty, 
         setNewBounty: setNewBounty,
-        updates: updates, 
         getBounties: getBounties,
         addBounty: addBounty,
         deleteBounty: deleteBounty,

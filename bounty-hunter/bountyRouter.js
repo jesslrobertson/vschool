@@ -7,7 +7,7 @@ const bounties = [
   {
     name: "Obi Wan Kenobi",
     alignment: "jedi",
-    status: "alive",
+    living: true,
     reward: 1000,
     _id: "06e5f784-1764-43d4-b665-4ab4e9ae9de4"
   },
@@ -15,7 +15,7 @@ const bounties = [
   {
     name: "Anakin Skywalker",
     alignment: "sith",
-    status: "alive",
+    living: true,
     reward: 5000,
     _id: "20bcdc6a-820a-4af4-872e-5311ab8a797f"
   },
@@ -23,7 +23,7 @@ const bounties = [
   {
     name: "Emperor Palpatine",
     alignment: "sith",
-    status: "alive",
+    living: true,
     reward: 8000,
     _id: "53c2baa3-e3d7-4506-8541-565dc4cea5fb"
   }
