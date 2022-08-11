@@ -9,7 +9,7 @@ export default function App() {
   function getShows(){
     axios.get("/tvShows")
       .then(res => setTvShows(res.data))
-      .catch(err => console.log(err))
+      .catch(err => console.log(err.response.data.errMsg))
   }
 
   function addShow(newShow){

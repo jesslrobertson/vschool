@@ -16,29 +16,40 @@ const books = [
 //get all, post one
 bookRouter.route("/")
   .get((req, res) => {
-    res.send(books)
+    res.status(200).send(books)
   })
   .post((req, res) => {
     const newBook = req.body;
     newBook._id = uuidv4();
     console.log(newBook);
     books.push(newBook);
-    res.send(`Successfully added ${newBook.title} to the database`);
+    res.status(201).send(`Successfully added ${newBook.title} to the database`);
   });
 
   //get one
 
-  bookRouter.get("/:bookId", (req, res) => {
+  bookRouter.get("/:bookId", (req, res, next) => {
     const bookId = req.params.bookId
     const foundBook = books.find(book => book._id === bookId)
-    res.send(foundBook)
+    if (!foundBook){
+      const error = new Error(`Book with ID ${bookId} was not found.`)
+      res.status(500)
+      return next(error)
+    }
+    res.status(200).send(foundBook)
   })
 
   //get by genre
-  bookRouter.get("/search/genre", (req, res) => {
+  bookRouter.get("/search/genre", (req, res, next) => {
     const genre = req.query.genre
+    console.log(genre)
+    if(!genre){
+      const error = new Error("You must provide a genre.")
+      res.status(500)
+      return next(error)
+    }
     const filteredBooks = books.filter( book => book.genre === genre)
-    res.send(filteredBooks)
+    res.status(200).send(filteredBooks)
   })
 
   //delete one
