@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.css-challenge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+
+.home {
+  height: 3.2rem;
+  width: 2.68rem;
+  display: flex;
+  flex-direction: column;
+  contain: content;
+  position: relative
+}
+
+.home > * {
+  padding: 0;
+}
+
+.roof-left {
+  border-left: solid 3px lightskyblue;
+  height: 3.4rem;
+  transform: rotate(50deg);
+  position: absolute;
+  justify-self: left;
+  top: -3.5px;
+}
+
+.roof-right {
+  border-right: solid 3px lightskyblue;
+  height: 3.32rem;
+  transform: rotate(130deg);
+  position: absolute;
+  right: 0px; 
+  top: -3.5px;
+
+}
+.box {
+  height: 1.55rem;
+  width: 2.28rem;
+  border-right: solid 3px lightskyblue;
+  border-left: solid 3px lightskyblue;
+  border-bottom: solid 3px lightskyblue;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  bottom: 0;
+  position: absolute;
+  justify-self: center;
+}
+
+.door {
+  border: solid 3px lightskyblue;
+  height: 1.2rem;
+  width: .6rem;
+  bottom: 0;
+  position: absolute;
+  right: 32%;
+}
+

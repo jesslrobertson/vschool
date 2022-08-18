@@ -1,6 +1,6 @@
 const express = require("express");
 const tvShowRouter = express.Router();
-const TvShow = require('../models/tvShow')
+const TvShow = require('../models/TvShow.js')
 
 //practice data
 
@@ -19,12 +19,23 @@ const TvShow = require('../models/tvShow')
 
 tvShowRouter.get("/", (req, res, next) => {
   TvShow.find((err, tvShows)=> {
-    console.log('Hit tvshow get all')
     if(err){
       res.status(500)
       return next(err)
     }
     return res.status(200).send(tvShows)
+  })
+})
+
+//get by genre
+
+tvShowRouter.get("/search/genre", (req, res, next) => {
+  TvShow.find({ genre: req.query.genre }, (err, shows) => {
+    if(err){
+      res.status(500)
+      return next(err)
+    }
+    return res.status(200).send(shows)
   })
 })
 //get all, post one
@@ -42,41 +53,54 @@ tvShowRouter.get("/", (req, res, next) => {
 //   });
 
 //get one
-tvShowRouter.get("/:tvShowId", (req, res, next) => {
-  const tvShowId = req.params.tvShowId
-  const foundShow = tvShows.find(tvShow => tvShow._id === tvShowId )
-  if(!foundShow){
-    const error = new Error("The item was not found.")
-    res.status(500)
-    return next(error)
-  }
-  res.status(200).send(foundShow)
+// tvShowRouter.get("/:tvShowId", (req, res, next) => {
+//   const tvShowId = req.params.tvShowId
+//   const foundShow = tvShows.find(tvShow => tvShow._id === tvShowId )
+//   if(!foundShow){
+//     const error = new Error("The item was not found.")
+//     res.status(500)
+//     return next(error)
+//   }
+//   res.status(200).send(foundShow)
+// })
+
+//post one
+tvShowRouter.post("/", (req, res, next) => {
+  const newTvShow = new TvShow(req.body)
+  newTvShow.save((err, savedTvShow) => {
+    if(err){
+      res.status(500)
+      return next(err)
+    }
+    return res.status(201).send(savedTvShow)
+  })
 })
 
 //delete one
 tvShowRouter.delete("/:showId", (req, res, next) => {
-  const showId = req.params.showId
-  const showIndex = tvShows.findIndex(show => show._id === showId)
-  tvShows.splice(showIndex, 1)
-  if(!showIndex){
-    const error = new Error(`The item with ID ${showId} was not found.`)
-    return next(error)
-  }
-  res.send("Successfully deleted show!")
-
+  TvShow.findOneAndDelete({_id: req.params.showId}, (err, item) => {
+    if(err){
+      res.status(500)
+      return next(err)
+    }
+    return res.status(200).send(`Successfully deleted ${item.title} from the database`)
+  })
 })
 
 //update one
 tvShowRouter.put('/:showId', (req, res, next) => {
-  const showId = req.params.showId
-  const showIndex = tvShows.findIndex(show => show._id === showId)
-  console.log(showIndex)
-  if(!showId){
-    const error = new Error(`The item with ID ${showId} was not found.`)
-    return next(error)
-  }
-  const updatedShow = Object.assign(tvShows[showIndex], req.body)
-  res.status(201).send(updatedShow)
+  TvShow.findOneAndUpdate(
+    {_id: req.params.showId},
+    req.body,
+    { new: true },
+    (err, updatedTvShow) => {
+      if(err){
+        res.status(500)
+        return next(err)
+      }
+      return res.status(201).send(updatedTvShow)
+    }
+  )
 })
 
 module.exports = tvShowRouter;

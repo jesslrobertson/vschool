@@ -10,6 +10,7 @@ const tvShowSchema = new Schema({
   },
   genre: {
     type: String,
+    enum: ['action', 'fantasy', 'comedy', 'horror'],
     required: true
   }
 })

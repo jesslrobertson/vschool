@@ -5,7 +5,18 @@ import AddShowForm from './components/AddShowForm.js'
 
 export default function App() {
   const [tvShows, setTvShows ] = useState([])
+  
+  function handleFilter(e){
+    if(e.target.value === "reset"){
+      getShows()
+    } else {
+    axios.get(`/tvshows/search/genre?genre=${e.target.value}`)
+    .then(res => setTvShows(res.data))
+    .catch(err => console.log(err.response.data.errMsg))
+    }
+  }
 
+  //get all
   function getShows(){
     axios.get("/tvShows")
       .then(res => setTvShows(res.data))
@@ -46,6 +57,14 @@ export default function App() {
         submit={addShow}
         btnText="Add Show"
       />
+      <h4>Filter by Genre</h4>
+      <select onChange={handleFilter} className="filter-form">
+        <option value="reset">- All Shows - </option>
+        <option value="fantasy">Fantasy</option>
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="horror">Horror</option>
+      </select>
       { tvShows.map(show => <Show 
         {...show} 
         key={show.title}

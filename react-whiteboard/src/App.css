@@ -1,0 +1,55 @@
+.App {
+  text-align: center;
+}
+
+.canvas-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.canvas {
+  border: grey, 2px, solid;
+  border-radius: 10px;
+}
+
+.menu-container {
+  width: 5rem;
+  height: auto;
+  border: red solid 1px;
+}
+
+.swatch {
+  height: 2rem;
+  width: 3rem;
+  border-radius: 10px;
+}
+
+.swatchBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.red {
+  background-color: #ff0000;
+}
+.orange {
+  background-color: #ffa500;
+}
+.yellow {
+  background-color: #ffff00;
+}
+.green {
+  background-color: #008000;
+}
+.blue {
+  background-color: #0000ff;
+}
+.violet {
+  background-color: #800080;
+}
+.brown {
+  background-color: #a52a2a;
+}
+.black {
+  background-color: black;
+}
