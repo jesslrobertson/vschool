@@ -11,7 +11,7 @@ export default function Menu(props){
     red: '#ff0000',
     orange: '#ffa500',
     yellow: '#ffff00',
-    green: '#008000',
+    green: '#01a201',
     blue: '#0000ff',
     purple: '#800080',
     brown: '#a52a2a',

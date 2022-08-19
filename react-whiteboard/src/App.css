@@ -22,6 +22,7 @@
   height: 2rem;
   width: 3rem;
   border-radius: 10px;
+  margin: 5px;
 }
 
 .swatchBox {
@@ -39,7 +40,7 @@
   background-color: #ffff00;
 }
 .green {
-  background-color: #008000;
+  background-color: #01a201;
 }
 .blue {
   background-color: #0000ff;
