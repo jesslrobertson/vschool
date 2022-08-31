@@ -10,6 +10,7 @@ export default React.memo(function SingleImage(props){
             <Image 
             hdurl={hdurl}
             url={url}
+            explanation = {explanation}
             />
             <div className='image-items'>
                 <h3 className='img-title'>{title}</h3>

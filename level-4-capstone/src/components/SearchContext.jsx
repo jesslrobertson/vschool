@@ -1,42 +1,58 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import axios from 'axios'
 
 const SearchContext = React.createContext()
 
 function SearchProvider(props) {
   const [results, setResults] = useState([])
+  const [original, setOriginal] = useState("")
+  const [previousSearch, setPreviousSearch] = useState("")
 
   function searchNasa(value) {
-    const query = value.split(" ").join("%");
+    const query = encodeURIComponent(value);
 
-    function getImg(res){
-      const imgData = res.data.collection.items
-        imgData.map(item => {
-          console.log(item.href)
-        })
-      }
-
-    axios
-      .get(`https://images-api.nasa.gov/search?q=${query}&media_type=image`)
+    axios.get(`https://images-api.nasa.gov/search?q=${query}&media_type=image`)
       .then((res) => {
         const imgObjects = res.data.collection.items
-        imgObjects.forEach(item => {
-          axios.get(item.href).then(result => {
-            item.original = result.data[0]
-          })
-        })
         setResults(imgObjects)
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
   }
 
-  console.log(results)
+  function filterJWST(array){
+    return array.filter(item => item.data[0].center !== "STScI (Hubble)")
+  }
+
+  function getJWSTImages(){
+    axios.get('https://images-api.nasa.gov/search?center=STScI&media_type=image')
+      .then((res) => {
+        const STScIObjects = res.data.collection.items
+        const JWSTObjects = filterJWST(STScIObjects);
+        setResults(JWSTObjects)
+        console.log(JWSTObjects)
+      })
+      .catch((err => console.log(err)))
+  }
+
+  function getImg(url){
+    axios.get(url)
+    .then((res) => {
+      setOriginal(res.data[0]);
+    })
+    .catch((err) => console.log(err))
+  }
 
   return (
     <SearchContext.Provider 
         value={{
             results,
-            searchNasa
+            searchNasa,
+            getImg,
+            original,
+            setOriginal,
+            getJWSTImages,
+            previousSearch,
+            setPreviousSearch
         }}>
         {props.children}
     </SearchContext.Provider>

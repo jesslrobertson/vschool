@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
 
-  const openInNewTab = url => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
+  // const openInNewTab = url => {
+  //   window.open(url, '_blank', 'noopener,noreferrer');
+  // };
 
   return (
     <footer>
@@ -13,6 +13,7 @@ export default function Footer() {
         <h4>Navigation</h4>
         <Link to="/">Home</Link>
         <Link to="APOD">NASA Astronomy Photo of the Day</Link>
+        <Link to="JWST">James Webb Space Telescope Gallery</Link>
         <Link to="randomimage">Random Image</Link>
         <Link to="search">Search</Link>
       </div>

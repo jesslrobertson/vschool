@@ -9,7 +9,7 @@
 }
 
 .nav-container {
-  z-index: 1000;
+  z-index: 998;
 }
 
 .link-container {
@@ -17,7 +17,7 @@
 }
 
 .link-container:hover {
-  background-color: #282b46;
+  background-color: #1D2540;
 }
 
 .menu-line {
