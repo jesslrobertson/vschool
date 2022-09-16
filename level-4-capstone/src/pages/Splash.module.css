@@ -1,9 +1,8 @@
-
 .splash_page {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: url('../assets/carina-nebula.png') no-repeat center center fixed;
+  background: url("../assets/carina-nebula.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -24,16 +23,17 @@
   max-width: 1000px;
   height: 35vh;
   max-height: 600px;
-  text-shadow: #080645 1px 3px 5px, 3px 1px 0px rgba(14,39,122,0);
+  text-shadow: #080645 1px 3px 5px, 3px 1px 0px rgba(14, 39, 122, 0);
   opacity: 100%;
   margin-top: 10vh;
 }
 
 .quote {
-  font-size: 3rem;
+  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 0.7599999999999999rem + 3.2vw, 3rem);
   line-height: 1.1;
   letter-spacing: -0.5px;
-  text-align: center; 
+  text-align: center;
   margin: 0;
 }
 .quote_credit {
@@ -50,62 +50,50 @@
 .about_box {
   width: 70vw;
   max-width: 900px;
-  background-color: rgba(29, 37, 64, .8);
+  background-color: rgba(29, 37, 64, 0.8);
   padding: 0px 15px 0px 15px;
   border-radius: 10px;
   margin-bottom: 7vh;
   margin-top: 1rem;
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.8378378378378378rem + 0.8108108108108111vw, 1.3rem);
 }
 
 @media screen and (max-width: 412px) {
-    .about_box {
-      line-height: 1.2;
-      width: 85vw;
-    }
-    .quote_box {
-      margin: 1rem;
-      margin-top: 6rem;
-      width: 85vw;
-    }
-    .quote {
-      font-size: 1.4rem;
-    }
+  .about_box {
+    line-height: 1.2;
+    width: 85vw;
   }
+  .quote_box {
+    margin: 1rem;
+    margin-top: 6rem;
+    width: 85vw;
+  }
+}
 
 @media screen and (min-width: 412px) {
-    .quote_box {
-      width: 90vw;
-    }
-    
-    .quote {
-      font-size: 1.3rem;
-    }  
-
-    .about_box {
-      line-height: 1.1;
-      width: 85vw;
-    }
+  .quote_box {
+    width: 90vw;
   }
 
+  .about_box {
+    line-height: 1.1;
+    width: 85vw;
+  }
+}
 
-  @media screen and (min-width: 650px) {
-    .quote {
-      font-size: 1.9rem;
-    }
+@media screen and (min-width: 650px) {
+  .quote_box {
+    width: 85vw;
+    margin: 1.5rem;
+    margin-top: 5rem;
+  }
 
-    .quote_box {
-      width: 85vw;
-      margin: 1.5rem;
-      margin-top: 5rem;
-    }
-
-    .about_box {
+  .about_box {
     width: 85vw;
     line-height: 1.2;
-    }
-
-
   }
+}
 
 @media screen and (min-width: 900px) {
   .quote_box {
@@ -116,9 +104,7 @@
     height: auto;
     max-height: 25vh;
   }
-  .quote {
-    font-size: 1.5rem; 
-  }
+
   .quote_credit {
     padding-left: 80%;
     font-size: 1.3rem;
@@ -127,17 +113,11 @@
     width: 75vw;
     margin-bottom: 2rem;
     margin-top: 2rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
-
 }
 
 @media screen and (min-width: 1024px) {
-
-  .quote {
-    font-size: 2rem;
-  }
-
   .quote_box {
     margin: 1rem;
     margin-top: 4rem;
@@ -147,78 +127,33 @@
   }
 
   .about_box {
-    font-size: .9rem;
     line-height: 1.1;
+    font-size: 1.4rem
   }
-
 }
 
-/* @media screen 
-  and (max-width: 1366px){
-    .quote_box {
-      margin-top: 5rem;
-    }
-  } */
-
 @media screen and (min-width: 1280px) {
-  
   .quote_box {
     margin: 1rem;
     margin-top: auto;
     margin-bottom: auto;
   }
-  .quote {
-    font-size: 2.5rem;
-    }
 
   .about_box {
-    font-size: 1rem;
     line-height: 1.1;
+    font-size: 1.4rem;
   }
 }
 
-@media screen and (min-width: 1400px) { 
-  
+@media screen and (min-width: 1400px) {
   .quote_box {
     margin: 1rem;
     margin-top: 5rem;
   }
-  .quote {
-    font-size: 2.5rem;
-    }
-
-  .about_box {
-    font-size: .9rem;
-  }
 }
 
 @media screen and (min-width: 1800px) {
-
-    .quote_box {
-      margin-top: auto;
-    }
-    .quote {
-      font-size: 3rem;
-    }
+  .quote_box {
+    margin-top: none;
   }
-
-/* ----------- Non-Retina Screens -----------
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .quote_box {
-      margin-top: 15vh;
-    }
-} */
-
-/* ----------- Retina Screens -----------
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .quote_box{
-      margin-top: 15vh;
-    }
-} */
+}
